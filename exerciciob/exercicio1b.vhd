@@ -7,7 +7,7 @@ ENTITY exercicio1b IS
 			s: OUT std_logic);
 END;
 
-ARCHITECTURE arq1b of exerciciob IS
+ARCHITECTURE arq1b of exercicio1b IS
 BEGIN
 	s <= a nand b;
 END arq1b;
