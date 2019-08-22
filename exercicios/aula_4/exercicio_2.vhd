@@ -7,7 +7,7 @@ entity exercicio_2 is
              c: OUT bit_vector(7 downto 0));
 end entity;
 
-architecture a of exercicio_2 is
+architecture arq of exercicio_2 is
 	begin
 		c(0) <= b(0);
 		c(1) <= b(1);
@@ -17,4 +17,4 @@ architecture a of exercicio_2 is
 		c(5) <= a(1);
 		c(6) <= a(2);
 		c(7) <= a(3);
-end a;
+end architecture;
