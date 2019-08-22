@@ -2,9 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity exercicio_2 is 
-	port(
-    	a, b: IN bit_vector(3 downto 0); 
-        c: OUT bit_vector(7 downto 0));
+	port(a: IN bit_vector(0 to 3);
+	     b: IN bit_vector(3 downto 0);
+             c: OUT bit_vector(7 downto 0));
 end entity;
 
 architecture a of exercicio_2 is
