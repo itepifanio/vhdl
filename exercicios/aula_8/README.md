@@ -23,10 +23,10 @@ que é representado por “111”. O botão 8 é representado por “000”.
 
 - Quando um botão é acionado, o valor desse botão é comparado com a codificação e é enviado à saída o respectivo café, ou seja:
 
-Botão 1 acionado, é enviado para a saída o café “A”
+    Botão 1 acionado, é enviado para a saída o café “A”
 
-Botão 2 acionado, é enviado para a saída o café “B”
+    Botão 2 acionado, é enviado para a saída o café “B”
 
-...
+    ...
 
-Botão 8 acionado, é enviado para a saída o café “H”
+    Botão 8 acionado, é enviado para a saída o café “H”
