@@ -1,4 +1,6 @@
 vendor_name = ModelSim
+source_file = 1, /home/italo/scolarship/vhdl/exercicios/aula_14/ULA/Waveform.vwf
+source_file = 1, /home/italo/scolarship/vhdl/exercicios/aula_14/ULA/Waveform1.vwf
 source_file = 1, /home/italo/scolarship/vhdl/exercicios/aula_14/ULA/ULA.vhd
 source_file = 1, /home/italo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/italo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
