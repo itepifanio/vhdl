@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/itepifanio/workspace/vhdl/exercicios/aula_14/ULA/simulation/qsim
+d/home/itepifanio/workspace/vhdl/exercicios/aula_14/ULA/simulation/qsim
 vULA
-Z1 !s110 1568233332
+Z0 !s110 1568243288
 !i10b 1
-!s100 9CzQg0cM?SBec2AXINGo80
-IiRM3d98lJdUG8Oh>PzNTT1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1568233331
+!s100 Ycef?8@RZBe2;9X_ATn9[1
+IL@nmMa^bR?VSEaXHmJf6h0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/simulation/qsim
+w1568243287
 8ULA.vo
 FULA.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1568233332.000000
+Z4 !s108 1568243288.000000
 !s107 ULA.vo|
 !s90 -work|work|ULA.vo|
 !i113 1
@@ -31,23 +31,23 @@ Z5 o-work work
 Z6 tCvgOpt 0
 n@u@l@a
 vULA_vlg_vec_tst
-R1
-!i10b 1
-!s100 NKiBoz[1Y4z45C9]_<onc3
-IJ?bSI8>]:YZ0C[PMRzYIG2
-R2
 R0
-w1568233328
-8Waveform.vwf.vt
-FWaveform.vwf.vt
+!i10b 1
+!s100 lj[[9aoBh<bKHdSFK^gl10
+IEPE2f3NO^eD5HBUYGD<LW2
+R1
+R2
+w1568243286
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
 L0 29
 R3
 r1
 !s85 0
 31
 R4
-!s107 Waveform.vwf.vt|
-!s90 -work|work|Waveform.vwf.vt|
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
 !i113 1
 R5
 R6

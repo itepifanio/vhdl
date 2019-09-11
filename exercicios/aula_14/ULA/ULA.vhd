@@ -23,22 +23,27 @@ architecture arq of ULA is
 			  saida: out std_logic_vector(7 downto 0));
 	end component;
 	
+	component subtrador is
+		port(x,y,z: in std_logic_vector(7 downto 0);
+		  cout: out std_logic;
+		  saida: out std_logic_vector(7 downto 0));
+	end component;
+	
 	signal batata: std_logic;
-	signal a_mais_b: std_logic_vector(7 downto 0);
+	signal a_mais_b, a_mais_1, a_menos_b: std_logic_vector(7 downto 0);
 	
 	begin
 		u0: somador port map (a, b, '0', batata, a_mais_b);
+		u1: somador port map (a, "00000001", '0', batata, a_mais_1);
 		process(a,b,op, a_mais_b) is
 			begin
 				case(op) is
 					when "000" =>
 						s <= a_mais_b;
 					when "001" =>
---						s <= a subtrador b;
-						s <= a;
+						s <= a_menos_b;
 					when "010" =>
---						s <= a somador "11111111";
-						s <= a;
+						s <= a_mais_1;
 					when "011" =>
 						s <= a;
 					when "100" =>
