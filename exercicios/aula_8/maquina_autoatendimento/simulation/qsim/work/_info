@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/itepifanio/vhdl/exercicios/aula_8/maquina_autoatendimento/simulation/qsim
 Emaquina_autoatendimento
-Z1 w1567005047
+Z1 w1567006093
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -22,13 +22,13 @@ Z9 8maquina_autoatendimento.vho
 Z10 Fmaquina_autoatendimento.vho
 l0
 L36
-VM82AjWR:mKRO5PXUVVYG23
-!s100 jIbFh2fl9Po[hh2j30S6o0
+VYfSG8cY0Kn4[Pm4nJz45]3
+!s100 zmB[XRGI?0<I8=gbf2;h;2
 Z11 OV;C;10.5b;63
 32
-Z12 !s110 1567005051
+Z12 !s110 1567006094
 !i10b 1
-Z13 !s108 1567005050.000000
+Z13 !s108 1567006094.000000
 Z14 !s90 -work|work|maquina_autoatendimento.vho|
 Z15 !s107 maquina_autoatendimento.vho|
 !i113 1
@@ -42,11 +42,11 @@ R5
 R6
 R7
 R8
-DEx4 work 23 maquina_autoatendimento 0 22 M82AjWR:mKRO5PXUVVYG23
-l102
-L79
-V0O28POL;VI<:RMhgglX[10
-!s100 6e;bO@HXW>j8:SjF7l6[@1
+DEx4 work 23 maquina_autoatendimento 0 22 YfSG8cY0Kn4[Pm4nJz45]3
+l78
+L57
+V@z2C^;?Ack^=zam61?]mk1
+!s100 G^VHEk___ADc8gB;2K@ho0
 R11
 32
 R12
@@ -58,12 +58,12 @@ R15
 R16
 R17
 Emaquina_autoatendimento_vhd_vec_tst
-Z18 w1567005045
+Z18 w1567006090
 R6
 R7
 R0
-Z19 8Waveform.vwf.vht
-Z20 FWaveform.vwf.vht
+Z19 8Waveform1.vwf.vht
+Z20 FWaveform1.vwf.vht
 l0
 L31
 VH9eY8[kg5J`156TSW0QB72
@@ -72,27 +72,27 @@ R11
 32
 R12
 !i10b 1
-Z21 !s108 1567005051.000000
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+R13
+Z21 !s90 -work|work|Waveform1.vwf.vht|
+Z22 !s107 Waveform1.vwf.vht|
 !i113 1
 R16
 R17
 Amaquina_autoatendimento_arch
 R6
 R7
-DEx4 work 35 maquina_autoatendimento_vhd_vec_tst 0 22 H9eY8[kg5J`156TSW0QB72
-l58
+Z23 DEx4 work 35 maquina_autoatendimento_vhd_vec_tst 0 22 H9eY8[kg5J`156TSW0QB72
+l44
 L33
-VR29;NU^?ImLGOJnhLQe3[2
-!s100 f7fR@lXJ[<Bz3jUEFIE_R0
+V]W5<9gF`U7YB6C9FKQBFG2
+!s100 47TCZEXDc;]SAW=iP>T?k1
 R11
 32
 R12
 !i10b 1
+R13
 R21
 R22
-R23
 !i113 1
 R16
 R17

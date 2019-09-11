@@ -1,7 +1,7 @@
 onerror {exit -code 1}
 vlib work
 vcom -work work maquina_autoatendimento.vho
-vcom -work work Waveform.vwf.vht
+vcom -work work Waveform1.vwf.vht
 vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.maquina_autoatendimento_vhd_vec_tst
 vcd file -direction maquina_autoatendimento.msim.vcd
 vcd add -internal maquina_autoatendimento_vhd_vec_tst/*

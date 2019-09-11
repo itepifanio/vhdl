@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+-- somador 8 bits
 entity somador is
 	port(a,b: in std_logic_vector(7 downto 0);
 		  s: out std_logic_vector(7 downto 0);
@@ -9,7 +9,7 @@ end entity;
 
 architecture arq of somador is
 	signal c: std_logic_vector(7 downto 0);
-	component som
+	component somadorcompleto
 		port(cin,x,y: in std_logic;
 			  saida,cout: out std_logic);
 	end component;
