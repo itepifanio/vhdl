@@ -19,15 +19,16 @@ architecture arq of ULA is
 	component somador is
 		port(x,y: in std_logic_vector(7 downto 0);
 			  cin:in std_logic;
-			  carry: out std_logic;
-			  s: out std_logic_vector(7 downto 0));
+			  cout: out std_logic;
+			  saida: out std_logic_vector(7 downto 0));
 	end component;
 	
+	signal batata: std_logic;
 	signal a_mais_b: std_logic_vector(7 downto 0);
 	
 	begin
-		i0: somador port map (a, b, '0', a_mais_b);
-		process(a,b,op) is
+		u0: somador port map (a, b, '0', batata, a_mais_b);
+		process(a,b,op, a_mais_b) is
 			begin
 				case(op) is
 					when "000" =>
