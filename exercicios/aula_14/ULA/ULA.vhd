@@ -18,14 +18,15 @@ end entity;
 architecture arq of ULA is
 	component somador is
 		port(x,y: in std_logic_vector(7 downto 0);
-			  s: out std_logic_vector(7 downto 0);
-			  carry: out std_logic);
+			  cin:in std_logic;
+			  carry: out std_logic;
+			  s: out std_logic_vector(7 downto 0));
 	end component;
 	
 	signal a_mais_b: std_logic_vector(7 downto 0);
 	
 	begin
-		i0: somador port map (a, b, a_mais_b);
+		i0: somador port map (a, b, '0', a_mais_b);
 		process(a,b,op) is
 			begin
 				case(op) is
