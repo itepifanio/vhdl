@@ -13,17 +13,9 @@ end entity;
 --	begin
 --		x <= ((a and b) or (not(b and c))) or ((not(((not b) and (not c)) or c)) and (not d));
 --end architecture;
+	
+-- dataflow	
 architecture arq of circuito is
---	component circ_and
---		port(a,b,c: in std_logic;
---			  s: out std_logic);
---	end component;
---
---	component circ_or
---		port(a,b,c,d: in std_logic;
---           s: out std_logic);
---	end component;
-
 	component circ_not
 		port(a: in std_logic;
            s: out std_logic);
@@ -40,7 +32,6 @@ architecture arq of circuito is
 	end component;
 	
 	signal aux: std_logic_vector(15 downto 0);
---	signal aux2: std_logic_vector(3 downto 0);
 	begin
 		s0: circ_not port map (b, aux(0)); -- aux(0) = not b
 		s6: circ_not port map (c, aux(5)); -- aux(5) = not c
