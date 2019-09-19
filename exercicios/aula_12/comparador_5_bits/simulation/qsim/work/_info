@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/italo/scolarship/vhdl/exercicios/aula_12/comparador_5_bits/simulation/qsim
 Ecomparador_5_bits
-Z1 w1567648418
+Z1 w1568858860
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -22,13 +22,13 @@ Z9 8comparador_5_bits.vho
 Z10 Fcomparador_5_bits.vho
 l0
 L36
-V312CMCJI@j[U9bh@SR?K@3
-!s100 S7iK6@;6h0`G79Uc4?aCE0
+VK6@VOQ;NSXJdWQK@14i_m1
+!s100 RIFm^J`SN3<Qj3VY6UZd82
 Z11 OV;C;10.5b;63
 32
-Z12 !s110 1567648418
+Z12 !s110 1568858861
 !i10b 1
-Z13 !s108 1567648418.000000
+Z13 !s108 1568858860.000000
 Z14 !s90 -work|work|comparador_5_bits.vho|
 Z15 !s107 comparador_5_bits.vho|
 !i113 1
@@ -42,11 +42,11 @@ R5
 R6
 R7
 R8
-DEx4 work 17 comparador_5_bits 0 22 312CMCJI@j[U9bh@SR?K@3
-l89
-L62
-V`nN]fKa8R?XL]cm:B_9VP1
-!s100 j:Hm@9`H=9LDV<djfE5el1
+DEx4 work 17 comparador_5_bits 0 22 K6@VOQ;NSXJdWQK@14i_m1
+l129
+L68
+VKYR^i;WghPW1[z=dhfl`n3
+!s100 mcT2>E=BGA6MzCjZ:oE7C2
 R11
 32
 R12
@@ -58,12 +58,12 @@ R15
 R16
 R17
 Ecomparador_5_bits_vhd_vec_tst
-Z18 w1567648416
+w1568858859
 R6
 R7
 R0
-Z19 8Waveform1.vwf.vht
-Z20 FWaveform1.vwf.vht
+8Waveform.vwf.vht
+FWaveform.vwf.vht
 l0
 L31
 VKG>BR[UUKG[?lMBFm6A1N1
@@ -72,27 +72,9 @@ R11
 32
 R12
 !i10b 1
-R13
-Z21 !s90 -work|work|Waveform1.vwf.vht|
-Z22 !s107 Waveform1.vwf.vht|
-!i113 1
-R16
-R17
-Acomparador_5_bits_arch
-R6
-R7
-Z23 DEx4 work 29 comparador_5_bits_vhd_vec_tst 0 22 KG>BR[UUKG[?lMBFm6A1N1
-l50
-L33
-Z24 VfE61E037db0MQabRAEni]2
-Z25 !s100 P]6:?GSDeE]I^ml?e1YZV3
-R11
-32
-R12
-!i10b 1
-R13
-R21
-R22
+!s108 1568858861.000000
+!s90 -work|work|Waveform.vwf.vht|
+!s107 Waveform.vwf.vht|
 !i113 1
 R16
 R17

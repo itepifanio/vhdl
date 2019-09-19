@@ -16,3 +16,4 @@ seja testada:
 	― 1 dos 3 números é o maior;
 	― 2 números são iguais e são os de maior valor;
 	― Todos tem o mesmo valor.
+
