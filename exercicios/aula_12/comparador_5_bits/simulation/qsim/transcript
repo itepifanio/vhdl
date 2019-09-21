@@ -1,7 +1,7 @@
 # do comparador_5_bits.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:07:40 on Sep 18,2019
+# Start time: 15:19:22 on Sep 21,2019
 # vcom -work work comparador_5_bits.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -13,222 +13,35 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity comparador_5_bits
 # -- Compiling architecture structure of comparador_5_bits
-# End time: 23:07:41 on Sep 18,2019, Elapsed time: 0:00:01
+# End time: 15:19:22 on Sep 21,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:07:41 on Sep 18,2019
+# Start time: 15:19:22 on Sep 21,2019
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity comparador_5_bits_vhd_vec_tst
 # -- Compiling architecture comparador_5_bits_arch of comparador_5_bits_vhd_vec_tst
-# ** Error: Waveform.vwf.vht(57): Symbol "i1" has already been declared in this region.
-# ** Error: Waveform.vwf.vht(63): ** Error: (vcom-1590) Bad expression in actual part of association element 'i1'.
-# ** Error: Waveform.vwf.vht(2348): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2348): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2350): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2350): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2352): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2352): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2354): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2354): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2356): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2356): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2358): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2358): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2360): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2360): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2362): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2362): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2364): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2364): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2366): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2366): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2368): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2368): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2370): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2370): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2372): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2372): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2374): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2374): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2376): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2376): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2378): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2378): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2380): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2380): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2382): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2382): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2384): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2384): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2386): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2386): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2388): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2388): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2390): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2390): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2392): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2392): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2394): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2394): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2396): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2396): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2398): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2398): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2400): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2400): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2402): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2402): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2404): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2404): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2406): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2406): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2408): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2408): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2410): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2410): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2412): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2412): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2414): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2414): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2416): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2416): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2418): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2418): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2420): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2420): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2422): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2422): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2424): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2424): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2426): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2426): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2428): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2428): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2430): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2430): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2432): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2432): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2434): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2434): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2436): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2436): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2438): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2438): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2440): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2440): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2442): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2442): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2444): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2444): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2446): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2446): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2448): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2448): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2450): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2450): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2452): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2452): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2454): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2454): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2456): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2456): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2458): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2458): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2460): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2460): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2462): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2462): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2464): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2464): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2466): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2466): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2468): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2468): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2470): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2470): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2472): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2472): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2474): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2474): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2476): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2476): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2478): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2478): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2480): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2480): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2482): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2482): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2484): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2484): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2486): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2486): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2488): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2488): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2490): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2490): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2492): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2492): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2494): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2494): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2496): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2496): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2498): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2498): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2500): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2500): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2502): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2502): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2504): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2504): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2506): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2506): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2508): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2508): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2510): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2510): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2512): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2512): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2514): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2514): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2516): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2516): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2518): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2518): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2520): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2520): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2522): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2522): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2524): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2524): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2526): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2526): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2528): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2528): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2530): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2530): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2532): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2532): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2534): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2534): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2536): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2536): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2538): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2538): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2540): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2540): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2542): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2542): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2544): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2544): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2546): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2546): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2548): Illegal target for signal assignment.
-# ** Error: Waveform.vwf.vht(2548): Bad target (component instantiation "i1") for signal assignment.
-# ** Error: Waveform.vwf.vht(2758): VHDL Compiler exiting
-# End time: 23:07:41 on Sep 18,2019, Elapsed time: 0:00:00
-# Errors: 205, Warnings: 0
-# ** Error: /home/italo/intelFPGA_lite/18.1/modelsim_ase/linuxaloem/vcom failed.
-# Executing ONERROR command at macro ./comparador_5_bits.do line 4
+# End time: 15:19:22 on Sep 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.comparador_5_bits_vhd_vec_tst 
+# Start time: 15:19:22 on Sep 21,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.comparador_5_bits_vhd_vec_tst(comparador_5_bits_arch)
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.comparador_5_bits(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# after#32
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# End time: 15:19:22 on Sep 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
