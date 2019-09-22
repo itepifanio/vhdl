@@ -1,46 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ULA -c ULA --vector_source="/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/Waveform.vwf" --testbench_file="/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ULA -c ULA --vector_source="/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/Waveform.vwf" --testbench_file="/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/simulation/qsim/" ULA -c ULA</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/italo/scolarship/vhdl/exercicios/aula_14/ULA/simulation/qsim/" ULA -c ULA</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vlog -work work ULA.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ULA_vlg_vec_tst
-vcd file -direction ULA.msim.vcd
-vcd add -internal ULA_vlg_vec_tst/*
-vcd add -internal ULA_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vlog -work work ULA.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ULA_vlg_vec_tst
-vcd file -direction ULA.msim.vcd
-vcd add -internal ULA_vlg_vec_tst/*
-vcd add -internal ULA_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -390,11 +347,11 @@ TRANSITION_LIST("a[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 410.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 270.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -403,11 +360,11 @@ TRANSITION_LIST("a[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 410.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -416,10 +373,11 @@ TRANSITION_LIST("a[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 360.0;
-		LEVEL 0 FOR 270.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -428,9 +386,11 @@ TRANSITION_LIST("a[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 590.0;
-		LEVEL 1 FOR 360.0;
-		LEVEL 0 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -439,11 +399,11 @@ TRANSITION_LIST("a[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 270.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -452,11 +412,11 @@ TRANSITION_LIST("a[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 410.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -465,14 +425,15 @@ TRANSITION_LIST("a[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 450.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -481,12 +442,14 @@ TRANSITION_LIST("a[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 440.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -495,12 +458,11 @@ TRANSITION_LIST("b[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 410.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -509,10 +471,11 @@ TRANSITION_LIST("b[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 590.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 270.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -521,12 +484,13 @@ TRANSITION_LIST("b[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 240.0;
-		LEVEL 1 FOR 260.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 270.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -535,8 +499,11 @@ TRANSITION_LIST("b[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 500.0;
-		LEVEL 1 FOR 500.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -545,9 +512,11 @@ TRANSITION_LIST("b[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 770.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -556,12 +525,11 @@ TRANSITION_LIST("b[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 180.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 230.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -570,10 +538,11 @@ TRANSITION_LIST("b[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 500.0;
-		LEVEL 1 FOR 360.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -582,10 +551,12 @@ TRANSITION_LIST("b[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 430.0;
-		LEVEL 1 FOR 270.0;
-		LEVEL 0 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 840.0;
+		}
 	}
 }
 
@@ -594,12 +565,11 @@ TRANSITION_LIST("op[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 410.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 180.0;
-		LEVEL 1 FOR 140.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -608,12 +578,13 @@ TRANSITION_LIST("op[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 270.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 270.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 160.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -622,14 +593,15 @@ TRANSITION_LIST("op[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 80.0;
-		LEVEL 1 FOR 260.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 270.0;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 50.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -638,7 +610,13 @@ TRANSITION_LIST("s[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -647,7 +625,13 @@ TRANSITION_LIST("s[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -656,7 +640,13 @@ TRANSITION_LIST("s[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -665,7 +655,13 @@ TRANSITION_LIST("s[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -674,7 +670,13 @@ TRANSITION_LIST("s[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -683,7 +685,13 @@ TRANSITION_LIST("s[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 240.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -692,7 +700,14 @@ TRANSITION_LIST("s[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 
@@ -701,7 +716,13 @@ TRANSITION_LIST("s[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 240.0;
+			LEVEL 0 FOR 680.0;
+		}
 	}
 }
 

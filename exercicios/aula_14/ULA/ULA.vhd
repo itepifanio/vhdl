@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity ULA is
+entity ULA is 
 	port(a,b: in std_logic_vector(7 downto 0);
 		  -- 000 A+B
 		  -- 001 A-B
@@ -16,26 +16,28 @@ entity ULA is
 end entity;
 
 architecture arq of ULA is
-	component somador is
-		port(x,y: in std_logic_vector(7 downto 0);
-			  cin:in std_logic;
+	component somador_8_bits is
+		port(a,b: in std_logic_vector(7 downto 0);
 			  cout: out std_logic;
-			  saida: out std_logic_vector(7 downto 0));
+			  s: out std_logic_vector(7 downto 0));
 	end component;
 	
-	component subtrador is
-		port(x,y,z: in std_logic_vector(7 downto 0);
-		  cout: out std_logic;
-		  saida: out std_logic_vector(7 downto 0));
+	component inversor is
+		Port (a: in  STD_LOGIC_VECTOR(7 downto 0);
+            s: out  STD_LOGIC_VECTOR(7 downto 0));
 	end component;
 	
-	signal batata: std_logic;
-	signal a_mais_b, a_mais_1, a_menos_b: std_logic_vector(7 downto 0);
-	
+	signal invertido1, invertido2, result, complemento1, complemento2: std_logic_vector(7 downto 0);
+	signal aux_cout: std_logic_vector(4 downto 0);
+	signal a_mais_b, a_menos_b, a_mais_1, a_menos_1: std_logic_vector(7 downto 0);
+
 	begin
-		u0: somador port map (a, b, '0', batata, a_mais_b);
-		u1: somador port map (a, "00000001", '0', batata, a_mais_1);
-		process(a,b,op, a_mais_b) is
+		a0: inversor port map(b, invertido1);
+		a1: somador_8_bits port map(invertido1, "00000001", aux_cout(0), complemento1); -- complemento de 2 de b
+		a2: somador_8_bits port map(a, complemento1, aux_cout(1), a_menos_b); -- a - b
+		a3: somador_8_bits port map(a,b,aux_cout(2),a_mais_b); -- a + b
+		a4: somador_8_bits port map(a,"00000001",aux_cout(3),a_mais_1); -- a + 1
+		process(a,b,op) is
 			begin
 				case(op) is
 					when "000" =>
