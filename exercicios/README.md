@@ -6,6 +6,10 @@ Exercícios introdutórios a VHDL.
 
 Elaboração de demux utilizando condicionais: case, if then else, when e if. Exemplo de simples de circuito combinacional para uma máquina de autoatendimento de café.
 
+## [Aula 10](https://github.com/itepifanio/vhdl/tree/master/exercicios/aula_10)
+
+Implementação de um subtrator de 4 bits sem utilizar a biblioteca ARITH e utilizando complemento de 2. Além disso, foi implementado uma calculadora de 8 bits que soma e subtrai.
+
 ## [Aula 12](https://github.com/itepifanio/vhdl/tree/master/exercicios/aula_12)
 
 Desenvolvimento de comparador de 5 bits, além de um circuito que determina o maior de 3 números de 8 bits.
