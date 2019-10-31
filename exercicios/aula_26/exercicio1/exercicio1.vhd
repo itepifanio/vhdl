@@ -60,19 +60,11 @@ architecture arq of exercicio1 is
 								l3 <= '1';
 							end if;
 						when others =>
-							if(bt = '0') then
-								y <= abre;
-								x <= '1';
-								l1 <= '0';
-								l2 <= '0';
-								l3 <= '1';
-							else 
 								y <= f1;
 								x <= '0';
 								l1 <= '0';
 								l2 <= '0';
 								l3 <= '0';
-							end if;
 					end case;
 				end if;	
 		end process;

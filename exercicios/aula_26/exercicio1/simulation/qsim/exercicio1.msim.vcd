@@ -3,7 +3,7 @@ $comment
 		vcd file exercicio1.msim.vcd -direction
 $end
 $date
-	Wed Oct 30 17:21:58 2019
+	Wed Oct 30 23:18:18 2019
 $end
 $version
 	ModelSim Version 10.5b
@@ -41,27 +41,26 @@ $var wire 1 7 \clk~input_o\ $end
 $var wire 1 8 \clk~inputCLKENA0_outclk\ $end
 $var wire 1 9 \bt~input_o\ $end
 $var wire 1 : \y[0]~feeder_combout\ $end
-$var wire 1 ; \Mux1~0_combout\ $end
-$var wire 1 < \y[2]~feeder_combout\ $end
-$var wire 1 = \Mux2~0_combout\ $end
-$var wire 1 > \y[1]~feeder_combout\ $end
+$var wire 1 ; \Mux2~0_combout\ $end
+$var wire 1 < \y[1]~feeder_combout\ $end
+$var wire 1 = \Mux1~0_combout\ $end
+$var wire 1 > \y[2]~feeder_combout\ $end
 $var wire 1 ? \Mux0~0_combout\ $end
 $var wire 1 @ \x~reg0_q\ $end
 $var wire 1 A \l1~reg0_q\ $end
-$var wire 1 B \l2~reg0feeder_combout\ $end
-$var wire 1 C \l2~reg0_q\ $end
-$var wire 1 D \l3~reg0_q\ $end
-$var wire 1 E y [3] $end
-$var wire 1 F y [2] $end
-$var wire 1 G y [1] $end
-$var wire 1 H y [0] $end
-$var wire 1 I \ALT_INV_bt~input_o\ $end
-$var wire 1 J \ALT_INV_Mux2~0_combout\ $end
-$var wire 1 K \ALT_INV_Mux1~0_combout\ $end
-$var wire 1 L \ALT_INV_Mux0~0_combout\ $end
-$var wire 1 M ALT_INV_y [2] $end
-$var wire 1 N ALT_INV_y [1] $end
-$var wire 1 O ALT_INV_y [0] $end
+$var wire 1 B \l2~reg0_q\ $end
+$var wire 1 C \l3~reg0_q\ $end
+$var wire 1 D y [3] $end
+$var wire 1 E y [2] $end
+$var wire 1 F y [1] $end
+$var wire 1 G y [0] $end
+$var wire 1 H \ALT_INV_bt~input_o\ $end
+$var wire 1 I \ALT_INV_Mux2~0_combout\ $end
+$var wire 1 J \ALT_INV_Mux1~0_combout\ $end
+$var wire 1 K \ALT_INV_Mux0~0_combout\ $end
+$var wire 1 L ALT_INV_y [2] $end
+$var wire 1 M ALT_INV_y [1] $end
+$var wire 1 N ALT_INV_y [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -102,43 +101,41 @@ x6
 0A
 0B
 0C
-0D
+1H
 1I
 1J
 1K
-1L
-xE
+xD
+0E
 0F
 0G
-0H
+1L
 1M
 1N
-1O
 $end
 #20000
 1!
 11
 19
-0I
-1;
-0K
-1<
+0H
+1=
+0J
+1>
 #25000
 1"
 10
 17
 18
-1F
+1E
 1A
-0M
-0;
-1=
-0J
-1K
+0L
+1;
+0=
+1J
+0I
 13
-0<
-1>
-1B
+1<
+0>
 1#
 #50000
 0"
@@ -149,14 +146,13 @@ $end
 0!
 01
 09
+1H
+0;
+1=
+0J
 1I
-1;
-0=
-1J
-0K
-1<
-0>
-0B
+0<
+1>
 #75000
 1"
 10
@@ -171,33 +167,31 @@ $end
 1!
 11
 19
+0H
+1;
+0=
+1J
 0I
-0;
-1=
-0J
-1K
-0<
-1>
-1B
+1<
+0>
 #125000
 1"
 10
 17
 18
-0F
-1G
+1F
+0E
 0A
-1C
-0N
-1M
-0=
+1B
+1L
+0M
+0;
 1?
-0L
-1J
+0K
+1I
 14
 03
-0>
-0B
+0<
 1:
 1$
 0#
@@ -210,13 +204,12 @@ $end
 0!
 01
 09
-1I
-1=
+1H
+1;
 0?
-1L
-0J
-1>
-1B
+1K
+0I
+1<
 0:
 #175000
 1"
@@ -232,28 +225,27 @@ $end
 1!
 11
 19
-0I
-0=
+0H
+0;
 1?
-0L
-1J
-0>
-0B
+0K
+1I
+0<
 1:
 #225000
 1"
 10
 17
 18
-1H
-0G
+1G
+0F
 1@
-0C
-1D
-1N
-0O
+0B
+1C
+1M
+0N
 0?
-1L
+1K
 15
 04
 12
@@ -270,15 +262,20 @@ $end
 0!
 01
 09
-1I
-1?
-0L
-1:
+1H
 #275000
 1"
 10
 17
 18
+0G
+0@
+0C
+1N
+05
+02
+0%
+0&
 #300000
 0"
 00
@@ -288,26 +285,26 @@ $end
 1!
 11
 19
-0I
-0?
-1L
-0:
+0H
+1=
+0J
+1>
 #325000
 1"
 10
 17
 18
-0H
-0@
-0D
-1O
+1E
+1A
+0L
 1;
-0K
-05
-02
+0=
+1J
+0I
+13
 1<
-0%
-0&
+0>
+1#
 #350000
 0"
 00
@@ -317,10 +314,13 @@ $end
 0!
 01
 09
-1I
+1H
 0;
-1K
+1=
+0J
+1I
 0<
+1>
 #375000
 1"
 10
@@ -335,27 +335,34 @@ $end
 1!
 11
 19
-0I
+0H
 1;
-0K
+0=
+1J
+0I
 1<
+0>
 #425000
 1"
 10
 17
 18
 1F
-1A
+0E
+0A
+1B
+1L
 0M
 0;
-1=
-0J
-1K
-13
+1?
+0K
+1I
+14
+03
 0<
-1>
-1B
-1#
+1:
+1$
+0#
 #450000
 0"
 00
@@ -365,14 +372,13 @@ $end
 0!
 01
 09
-1I
+1H
 1;
-0=
-1J
-0K
+0?
+1K
+0I
 1<
-0>
-0B
+0:
 #475000
 1"
 10

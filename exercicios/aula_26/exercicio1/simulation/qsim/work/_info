@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/italo/scolarship/vhdl/exercicios/aula_26/exercicio1/simulation/qsim
 Eexercicio1
-Z1 w1572466918
+Z1 w1572488297
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -28,9 +28,9 @@ VTV0NY0??z7RYC_@0W7GY_2
 !s100 ZkIU=9mo[EIc^YbLUeLGo0
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1572466918
+Z14 !s110 1572488298
 !i10b 1
-Z15 !s108 1572466918.000000
+Z15 !s108 1572488297.000000
 Z16 !s90 -work|work|exercicio1.vho|
 Z17 !s107 exercicio1.vho|
 !i113 1
@@ -47,10 +47,10 @@ R8
 R9
 R10
 DEx4 work 10 exercicio1 0 22 TV0NY0??z7RYC_@0W7GY_2
-l96
+l95
 L58
-VYb[RX3zj1h2I98Xc3Da9D2
-!s100 e<maW<AlW2]l4YSH07k843
+VdRo84`NRgKae9[e8n3XSM1
+!s100 8<;I4<4j<HT7lOKz`8c4F1
 R13
 32
 R14
@@ -62,7 +62,7 @@ R17
 R18
 R19
 Eexercicio1_vhd_vec_tst
-Z20 w1572466916
+Z20 w1572488296
 R8
 R9
 R0
@@ -76,27 +76,27 @@ R13
 32
 R14
 !i10b 1
-R15
-Z23 !s90 -work|work|Waveform.vwf.vht|
-Z24 !s107 Waveform.vwf.vht|
+Z23 !s108 1572488298.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
 !i113 1
 R18
 R19
 Aexercicio1_arch
 R8
 R9
-Z25 DEx4 work 22 exercicio1_vhd_vec_tst 0 22 D_Pb^Cn84M;L1R`iNDL2_1
+Z26 DEx4 work 22 exercicio1_vhd_vec_tst 0 22 D_Pb^Cn84M;L1R`iNDL2_1
 l52
 L33
-Z26 V?OU[5nYmUAUFBbLUT];o>2
-Z27 !s100 ?i@fSH9JiKd3o9hNDmBY91
+Z27 V?OU[5nYmUAUFBbLUT];o>2
+Z28 !s100 ?i@fSH9JiKd3o9hNDmBY91
 R13
 32
 R14
 !i10b 1
-R15
 R23
 R24
+R25
 !i113 1
 R18
 R19
