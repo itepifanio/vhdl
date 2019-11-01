@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/itepifanio/vhdl/exercicios/aula_26/exercicio2/simulation/qsim
+Eexercicio2
+Z1 w1572626971
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z11 8exercicio2.vho
+Z12 Fexercicio2.vho
+l0
+L38
+VRj?273am;WI?B^ai2RoVn0
+!s100 5^U]HW[dcJNaBjjHzdgfz2
+Z13 OV;C;10.5b;63
+32
+Z14 !s110 1572626972
+!i10b 1
+Z15 !s108 1572626971.000000
+Z16 !s90 -work|work|exercicio2.vho|
+Z17 !s107 exercicio2.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 10 exercicio2 0 22 Rj?273am;WI?B^ai2RoVn0
+l81
+L54
+VTc5b239bo?PO8]ad4PII11
+!s100 nMi;FKVn2KB<5?n_>P2K@1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Eexercicio2_vhd_vec_tst
+Z20 w1572626968
+R8
+R9
+R0
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L31
+Vc79BNdeRhjk[@7?c=WhT91
+!s100 ULE:2laNzea`<UBc5Q[^k3
+R13
+32
+R14
+!i10b 1
+Z23 !s108 1572626972.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+!i113 1
+R18
+R19
+Aexercicio2_arch
+R8
+R9
+Z26 DEx4 work 22 exercicio2_vhd_vec_tst 0 22 c79BNdeRhjk[@7?c=WhT91
+l48
+L33
+VAiobF<GT>AXjNkT@=n0;93
+!s100 zb2TiN?ITnaR_am^5NacW0
+R13
+32
+R14
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R18
+R19
