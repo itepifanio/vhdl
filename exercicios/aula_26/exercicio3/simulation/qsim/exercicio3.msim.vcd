@@ -1,0 +1,333 @@
+$comment
+	File created using the following command:
+		vcd file exercicio3.msim.vcd -direction
+$end
+$date
+	Sun Nov  3 20:35:11 2019
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module exercicio3_vhd_vec_tst $end
+$var wire 1 ! bt $end
+$var wire 1 " clk $end
+$var wire 1 # cons $end
+$var wire 1 $ km_par $end
+$var wire 1 % km_res $end
+$var wire 1 & km_tot $end
+
+$scope module i1 $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var wire 1 * devoe $end
+$var wire 1 + devclrn $end
+$var wire 1 , devpor $end
+$var wire 1 - ww_devoe $end
+$var wire 1 . ww_devclrn $end
+$var wire 1 / ww_devpor $end
+$var wire 1 0 ww_clk $end
+$var wire 1 1 ww_bt $end
+$var wire 1 2 ww_km_par $end
+$var wire 1 3 ww_km_res $end
+$var wire 1 4 ww_cons $end
+$var wire 1 5 ww_km_tot $end
+$var wire 1 6 \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 7 \clk~input_o\ $end
+$var wire 1 8 \clk~inputCLKENA0_outclk\ $end
+$var wire 1 9 \bt~input_o\ $end
+$var wire 1 : \s[0]~1_combout\ $end
+$var wire 1 ; \prev_bt~feeder_combout\ $end
+$var wire 1 < \prev_bt~q\ $end
+$var wire 1 = \process_0~0_combout\ $end
+$var wire 1 > \s[1]~0_combout\ $end
+$var wire 1 ? \Mux0~0_combout\ $end
+$var wire 1 @ \km_par~reg0_q\ $end
+$var wire 1 A \Mux0~1_combout\ $end
+$var wire 1 B \km_res~reg0_q\ $end
+$var wire 1 C \Mux0~2_combout\ $end
+$var wire 1 D \cons~reg0_q\ $end
+$var wire 1 E \Mux2~0_combout\ $end
+$var wire 1 F \km_tot~reg0_q\ $end
+$var wire 1 G s [1] $end
+$var wire 1 H s [0] $end
+$var wire 1 I \ALT_INV_bt~input_o\ $end
+$var wire 1 J \ALT_INV_prev_bt~q\ $end
+$var wire 1 K ALT_INV_s [1] $end
+$var wire 1 L ALT_INV_s [0] $end
+$var wire 1 M \ALT_INV_km_tot~reg0_q\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+1&
+0'
+1(
+x)
+1*
+1+
+1,
+1-
+1.
+1/
+00
+01
+02
+03
+04
+15
+x6
+07
+08
+09
+1:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+1C
+0D
+1E
+0F
+1I
+1J
+1M
+0G
+0H
+1K
+1L
+$end
+#50000
+1"
+10
+17
+18
+#100000
+0"
+00
+07
+08
+#120000
+1!
+11
+19
+0I
+1;
+1=
+1>
+#150000
+1"
+10
+17
+18
+1<
+1H
+1G
+1D
+1F
+0M
+0K
+0L
+0J
+0=
+0:
+1A
+0C
+14
+05
+1#
+0&
+#200000
+0"
+00
+07
+08
+#220000
+0!
+01
+09
+1I
+0;
+#250000
+1"
+10
+17
+18
+0<
+1J
+#300000
+0"
+00
+07
+08
+#340000
+1!
+11
+19
+0I
+1;
+1=
+#350000
+1"
+10
+17
+18
+1<
+0H
+1B
+0D
+1L
+0J
+0=
+1:
+1?
+0A
+04
+13
+0#
+1%
+#400000
+0"
+00
+07
+08
+#420000
+0!
+01
+09
+1I
+0;
+#450000
+1"
+10
+17
+18
+0<
+1J
+#500000
+0"
+00
+07
+08
+#540000
+1!
+11
+19
+0I
+1;
+1=
+0>
+#550000
+1"
+10
+17
+18
+1<
+1H
+0G
+1@
+0B
+1K
+0L
+0J
+0=
+0:
+0?
+0E
+03
+12
+0%
+1$
+#600000
+0"
+00
+07
+08
+#620000
+0!
+01
+09
+1I
+0;
+#650000
+1"
+10
+17
+18
+0<
+1J
+#700000
+0"
+00
+07
+08
+#720000
+1!
+11
+19
+0I
+1;
+1=
+#750000
+1"
+10
+17
+18
+1<
+0H
+0@
+0F
+1M
+1L
+0J
+0=
+1:
+1C
+1E
+02
+15
+0$
+1&
+#800000
+0"
+00
+07
+08
+#820000
+0!
+01
+09
+1I
+0;
+#850000
+1"
+10
+17
+18
+0<
+1J
+#900000
+0"
+00
+07
+08
+#950000
+1"
+10
+17
+18
+#1000000
