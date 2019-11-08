@@ -2,25 +2,17 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity registrador is
-	port(clk, reset, w, in_i: in std_logic; -- clock, reset, write, value input, value output
-		  o: out std_logic);
+	port(i: in std_logic_vector(15 downto 0);
+		  clk: in std_logic;
+		  q: out std_logic_vector(15 downto 0));
 end entity;
 
 architecture arq of registrador is
-	signal d: std_logic;
-	signal q: std_logic;
 	begin
-		o <= q;
-		with w select d <=
-			in_i when '1',
-			q when others;
-		
-		process(clk, reset)
+		process(i, clk)
 			begin
-				if(clk = '1') then
-					q <= '0';
-				elsif(rising_edge(clk)) then
-					q <= d;
+				if(clk'event and clk = '1') then
+					q <= i;
 				end if;
 		end process;
 end architecture;
