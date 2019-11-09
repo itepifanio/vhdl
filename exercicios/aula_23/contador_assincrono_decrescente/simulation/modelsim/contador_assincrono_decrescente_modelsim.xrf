@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, /home/italo/scolarship/vhdl/exercicios/aula_23/contador_assincrono_decrescente/contador_assincrono_decrescente.vhd
+source_file = 1, /home/italo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/italo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/italo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/italo/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/italo/scolarship/vhdl/exercicios/aula_23/contador_assincrono_decrescente/db/contador_assincrono_decrescente.cbx.xml
+design_name = contador_assincrono_decrescente
+instance = comp, \q0~output , q0~output, contador_assincrono_decrescente, 1
+instance = comp, \q1~output , q1~output, contador_assincrono_decrescente, 1
+instance = comp, \clk~input , clk~input, contador_assincrono_decrescente, 1
+instance = comp, \sq0~0 , sq0~0, contador_assincrono_decrescente, 1
+instance = comp, \sq0~feeder , sq0~feeder, contador_assincrono_decrescente, 1
+instance = comp, \sq1~0 , sq1~0, contador_assincrono_decrescente, 1
+instance = comp, \sq1~feeder , sq1~feeder, contador_assincrono_decrescente, 1
+instance = comp, \sq1~DUPLICATE , sq1~DUPLICATE, contador_assincrono_decrescente, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, contador_assincrono_decrescente, 1
