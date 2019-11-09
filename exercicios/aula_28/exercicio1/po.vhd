@@ -7,7 +7,7 @@ ENTITY po IS
 	PORT ( clk, tot_ld, tot_clr : IN STD_LOGIC;
 	s, a: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 	tot_lt_s: OUT STD_LOGIC);
-END;
+END ENTITY;
 
 ARCHITECTURE arq OF po IS
 	SIGNAL tot_saida: STD_LOGIC_VECTOR (7 DOWNTO 0) := A;
@@ -25,6 +25,8 @@ ARCHITECTURE arq OF po IS
 				END IF;
 			END IF;
 			IF (tot_saida >= s) THEN
+				tot_lt_s <= '0';
+			ELSE
 				tot_lt_s <= '1';
 			END IF;
 		END PROCESS;
