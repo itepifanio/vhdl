@@ -1,0 +1,278 @@
+$comment
+	File created using the following command:
+		vcd file display_7_segmentos.msim.vcd -direction
+$end
+$date
+	Sun Nov 10 12:41:37 2019
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module display_7_segmentos_vhd_vec_tst $end
+$var wire 1 ! data [3] $end
+$var wire 1 " data [2] $end
+$var wire 1 # data [1] $end
+$var wire 1 $ data [0] $end
+$var wire 1 % s0 $end
+$var wire 1 & s1 $end
+$var wire 1 ' s2 $end
+$var wire 1 ( s3 $end
+$var wire 1 ) s4 $end
+$var wire 1 * s5 $end
+$var wire 1 + s6 $end
+
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var wire 1 / devoe $end
+$var wire 1 0 devclrn $end
+$var wire 1 1 devpor $end
+$var wire 1 2 ww_devoe $end
+$var wire 1 3 ww_devclrn $end
+$var wire 1 4 ww_devpor $end
+$var wire 1 5 ww_data [3] $end
+$var wire 1 6 ww_data [2] $end
+$var wire 1 7 ww_data [1] $end
+$var wire 1 8 ww_data [0] $end
+$var wire 1 9 ww_s0 $end
+$var wire 1 : ww_s1 $end
+$var wire 1 ; ww_s2 $end
+$var wire 1 < ww_s3 $end
+$var wire 1 = ww_s4 $end
+$var wire 1 > ww_s5 $end
+$var wire 1 ? ww_s6 $end
+$var wire 1 @ \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 A \data[2]~input_o\ $end
+$var wire 1 B \data[1]~input_o\ $end
+$var wire 1 C \data[0]~input_o\ $end
+$var wire 1 D \data[3]~input_o\ $end
+$var wire 1 E \Mux6~0_combout\ $end
+$var wire 1 F \Mux5~0_combout\ $end
+$var wire 1 G \Mux4~0_combout\ $end
+$var wire 1 H \Mux3~0_combout\ $end
+$var wire 1 I \Mux2~0_combout\ $end
+$var wire 1 J \Mux1~0_combout\ $end
+$var wire 1 K \Mux0~0_combout\ $end
+$var wire 1 L \ALT_INV_data[3]~input_o\ $end
+$var wire 1 M \ALT_INV_data[2]~input_o\ $end
+$var wire 1 N \ALT_INV_data[1]~input_o\ $end
+$var wire 1 O \ALT_INV_data[0]~input_o\ $end
+$var wire 1 P \ALT_INV_Mux6~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1%
+1&
+1'
+1(
+0)
+0*
+1+
+0,
+1-
+x.
+1/
+10
+11
+12
+13
+14
+19
+1:
+1;
+1<
+0=
+0>
+1?
+x@
+0A
+0B
+1C
+0D
+0E
+1F
+1G
+1H
+0I
+0J
+1K
+1L
+1M
+1N
+0O
+1P
+0!
+0"
+0#
+1$
+05
+06
+07
+18
+$end
+#80000
+1#
+0$
+08
+17
+1B
+0C
+1O
+0N
+1E
+0G
+0H
+1I
+0K
+0P
+0?
+1=
+0<
+0;
+09
+0+
+1)
+0(
+0'
+0%
+#180000
+1$
+18
+1C
+0O
+1G
+0I
+0=
+1;
+0)
+1'
+#280000
+0$
+0#
+1"
+08
+07
+16
+1A
+0B
+0C
+1O
+1N
+0M
+0F
+1H
+1K
+1?
+1<
+0:
+1+
+1(
+0&
+#380000
+1$
+18
+1C
+0O
+0H
+1J
+0K
+0?
+1>
+0<
+0+
+1*
+0(
+#480000
+0$
+1#
+08
+17
+1B
+0C
+1O
+0N
+0G
+0;
+0'
+#600000
+1$
+18
+1C
+0O
+0E
+1F
+1G
+1H
+0J
+1P
+0>
+1<
+1;
+1:
+19
+0*
+1(
+1'
+1&
+1%
+#700000
+0$
+0#
+0"
+1!
+08
+07
+06
+15
+1D
+0A
+0B
+0C
+1O
+1N
+1M
+0L
+1E
+0F
+0G
+0H
+0P
+0<
+0;
+0:
+09
+0(
+0'
+0&
+0%
+#800000
+1$
+18
+1C
+0O
+1G
+1;
+1'
+#900000
+0$
+1#
+08
+17
+1B
+0C
+1O
+0N
+0G
+1H
+1<
+0;
+1(
+0'
+#1000000
