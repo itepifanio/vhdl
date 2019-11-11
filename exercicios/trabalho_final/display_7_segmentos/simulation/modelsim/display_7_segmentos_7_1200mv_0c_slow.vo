@@ -72,7 +72,7 @@ tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
 // synopsys translate_off
-initial $sdf_annotate("display_7_segmentos_v.sdo");
+initial $sdf_annotate("display_7_segmentos_7_1200mv_0c_v_slow.sdo");
 // synopsys translate_on
 
 wire \s0~output_o ;
