@@ -1,10 +1,10 @@
 vendor_name = ModelSim
-source_file = 1, /home/itepifanio/workspace/vhdl/exercicios/trabalho_final/display_7_segmentos/display_7_segmentos.vhd
+source_file = 1, /home/epitaciobessa/vhdl/exercicios/trabalho_final/display_7_segmentos/display_7_segmentos.vhd
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, /home/itepifanio/workspace/vhdl/exercicios/trabalho_final/display_7_segmentos/db/display_7_segmentos.cbx.xml
+source_file = 1, /home/epitaciobessa/vhdl/exercicios/trabalho_final/display_7_segmentos/db/display_7_segmentos.cbx.xml
 design_name = display_7_segmentos
 instance = comp, \s0~output , s0~output, display_7_segmentos, 1
 instance = comp, \s1~output , s1~output, display_7_segmentos, 1

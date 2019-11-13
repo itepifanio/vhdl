@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/display_7_segmentos/output_files/") File("display_7_segmentos.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("/home/epitaciobessa/vhdl/exercicios/trabalho_final/display_7_segmentos/output_files/") File("display_7_segmentos.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
