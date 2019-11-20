@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "11/11/2019 12:29:26"
+// DATE "11/20/2019 12:37:00"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -30,30 +30,18 @@
 
 module display_7_segmentos (
 	data,
-	s0,
-	s1,
-	s2,
-	s3,
-	s4,
-	s5,
-	s6);
+	saida);
 input 	[3:0] data;
-output 	s0;
-output 	s1;
-output 	s2;
-output 	s3;
-output 	s4;
-output 	s5;
-output 	s6;
+output 	[6:0] saida;
 
 // Design Ports Information
-// s0	=>  Location: PIN_AA17,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// s1	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// s2	=>  Location: PIN_AA16,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// s3	=>  Location: PIN_AB17,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// s4	=>  Location: PIN_AB15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// s5	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// s6	=>  Location: PIN_AC17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[0]	=>  Location: PIN_AC17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[1]	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[2]	=>  Location: PIN_AB15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[3]	=>  Location: PIN_AB17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[4]	=>  Location: PIN_AA16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[5]	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// saida[6]	=>  Location: PIN_AA17,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // data[0]	=>  Location: PIN_Y23,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // data[1]	=>  Location: PIN_Y24,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // data[2]	=>  Location: PIN_AA22,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -75,13 +63,13 @@ tri1 devoe;
 initial $sdf_annotate("display_7_segmentos_7_1200mv_85c_v_slow.sdo");
 // synopsys translate_on
 
-wire \s0~output_o ;
-wire \s1~output_o ;
-wire \s2~output_o ;
-wire \s3~output_o ;
-wire \s4~output_o ;
-wire \s5~output_o ;
-wire \s6~output_o ;
+wire \saida[0]~output_o ;
+wire \saida[1]~output_o ;
+wire \saida[2]~output_o ;
+wire \saida[3]~output_o ;
+wire \saida[4]~output_o ;
+wire \saida[5]~output_o ;
+wire \saida[6]~output_o ;
 wire \data[3]~input_o ;
 wire \data[2]~input_o ;
 wire \data[1]~input_o ;
@@ -100,95 +88,95 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: IOOBUF_X89_Y0_N23
-cycloneive_io_obuf \s0~output (
+// Location: IOOBUF_X74_Y0_N23
+cycloneive_io_obuf \saida[0]~output (
 	.i(!\Mux6~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s0~output_o ),
+	.o(\saida[0]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s0~output .bus_hold = "false";
-defparam \s0~output .open_drain_output = "false";
+defparam \saida[0]~output .bus_hold = "false";
+defparam \saida[0]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X65_Y0_N2
-cycloneive_io_obuf \s1~output (
+// Location: IOOBUF_X67_Y0_N23
+cycloneive_io_obuf \saida[1]~output (
 	.i(\Mux5~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s1~output_o ),
+	.o(\saida[1]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s1~output .bus_hold = "false";
-defparam \s1~output .open_drain_output = "false";
+defparam \saida[1]~output .bus_hold = "false";
+defparam \saida[1]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X65_Y0_N9
-cycloneive_io_obuf \s2~output (
+// Location: IOOBUF_X67_Y0_N16
+cycloneive_io_obuf \saida[2]~output (
 	.i(\Mux4~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s2~output_o ),
+	.o(\saida[2]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s2~output .bus_hold = "false";
-defparam \s2~output .open_drain_output = "false";
+defparam \saida[2]~output .bus_hold = "false";
+defparam \saida[2]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X89_Y0_N16
-cycloneive_io_obuf \s3~output (
+cycloneive_io_obuf \saida[3]~output (
 	.i(\Mux3~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s3~output_o ),
+	.o(\saida[3]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s3~output .bus_hold = "false";
-defparam \s3~output .open_drain_output = "false";
+defparam \saida[3]~output .bus_hold = "false";
+defparam \saida[3]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X67_Y0_N16
-cycloneive_io_obuf \s4~output (
+// Location: IOOBUF_X65_Y0_N9
+cycloneive_io_obuf \saida[4]~output (
 	.i(\Mux2~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s4~output_o ),
+	.o(\saida[4]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s4~output .bus_hold = "false";
-defparam \s4~output .open_drain_output = "false";
+defparam \saida[4]~output .bus_hold = "false";
+defparam \saida[4]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X67_Y0_N23
-cycloneive_io_obuf \s5~output (
+// Location: IOOBUF_X65_Y0_N2
+cycloneive_io_obuf \saida[5]~output (
 	.i(\Mux1~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s5~output_o ),
+	.o(\saida[5]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s5~output .bus_hold = "false";
-defparam \s5~output .open_drain_output = "false";
+defparam \saida[5]~output .bus_hold = "false";
+defparam \saida[5]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X74_Y0_N23
-cycloneive_io_obuf \s6~output (
+// Location: IOOBUF_X89_Y0_N23
+cycloneive_io_obuf \saida[6]~output (
 	.i(\Mux0~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\s6~output_o ),
+	.o(\saida[6]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \s6~output .bus_hold = "false";
-defparam \s6~output .open_drain_output = "false";
+defparam \saida[6]~output .bus_hold = "false";
+defparam \saida[6]~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOIBUF_X115_Y10_N8
@@ -248,7 +236,7 @@ defparam \Mux6~0 .lut_mask = 16'hBEF6;
 defparam \Mux6~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X89_Y3_N26
+// Location: LCCOMB_X89_Y3_N10
 cycloneive_lcell_comb \Mux5~0 (
 // Equation(s):
 // \Mux5~0_combout  = (\data[2]~input_o  & (\data[0]~input_o  & (\data[3]~input_o  $ (\data[1]~input_o )))) # (!\data[2]~input_o  & (!\data[3]~input_o  & ((\data[1]~input_o ) # (\data[0]~input_o ))))
@@ -316,7 +304,7 @@ defparam \Mux2~0 .lut_mask = 16'h8098;
 defparam \Mux2~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X89_Y3_N10
+// Location: LCCOMB_X89_Y3_N26
 cycloneive_lcell_comb \Mux1~0 (
 // Equation(s):
 // \Mux1~0_combout  = (\data[3]~input_o  & ((\data[0]~input_o  & ((\data[1]~input_o ))) # (!\data[0]~input_o  & (\data[2]~input_o )))) # (!\data[3]~input_o  & (\data[2]~input_o  & (\data[1]~input_o  $ (\data[0]~input_o ))))
@@ -350,19 +338,19 @@ defparam \Mux0~0 .lut_mask = 16'h2904;
 defparam \Mux0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-assign s0 = \s0~output_o ;
+assign saida[0] = \saida[0]~output_o ;
 
-assign s1 = \s1~output_o ;
+assign saida[1] = \saida[1]~output_o ;
 
-assign s2 = \s2~output_o ;
+assign saida[2] = \saida[2]~output_o ;
 
-assign s3 = \s3~output_o ;
+assign saida[3] = \saida[3]~output_o ;
 
-assign s4 = \s4~output_o ;
+assign saida[4] = \saida[4]~output_o ;
 
-assign s5 = \s5~output_o ;
+assign saida[5] = \saida[5]~output_o ;
 
-assign s6 = \s6~output_o ;
+assign saida[6] = \saida[6]~output_o ;
 
 endmodule
 

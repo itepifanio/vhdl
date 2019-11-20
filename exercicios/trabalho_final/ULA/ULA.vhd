@@ -12,7 +12,9 @@ entity ULA is
 		  -- 110 A xor B
 		  -- 111 not B
 		  op: in std_logic_vector(2 downto 0);
-		  s: out std_logic_vector(15 downto 0));
+		  s: inout std_logic_vector(15 downto 0);
+		  sd1, sd2, sd3, sd4 : out std_logic_vector(6 downto 0)
+   );
 end entity;
 
 architecture arq of ULA is
@@ -27,8 +29,15 @@ architecture arq of ULA is
             s: out  STD_LOGIC_VECTOR(15 downto 0));
 	end component;
 	
+	component display_7_segmentos is
+		port(data: in std_logic_vector(3 downto 0); 
+		  saida: out std_logic_vector(6 downto 0)
+		);
+	end component;
+	
 	signal invertido1, invertido2, result, complemento1, complemento2: std_logic_vector(15 downto 0);
 	signal aux_cout: std_logic_vector(4 downto 0);
+	signal dis1, dis2, dis3, dis4 : std_logic_vector(6 downto 0);
 	signal a_mais_b, a_menos_b, a_mais_1, a_menos_1: std_logic_vector(15 downto 0);
 
 	begin
@@ -58,4 +67,15 @@ architecture arq of ULA is
 						s <= not a;
 				end case;
 		end process;
+		
+		a5: display_7_segmentos port map(s(3 downto 0), dis1);
+		a6: display_7_segmentos port map(s(7 downto 4), dis2);
+		a7: display_7_segmentos port map(s(11 downto 8), dis3);
+		a8: display_7_segmentos port map(s(15 downto 12), dis4);
+		
+		sd1 <= dis1;
+		sd2 <= dis2;
+		sd3 <= dis3;
+		sd4 <= dis4;
+		
 end architecture;
