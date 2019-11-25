@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE auto
+set_global_assignment -name DEVICE EP4CE115F29C7
 set_global_assignment -name TOP_LEVEL_ENTITY ULA
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:28:05  NOVEMBER 13, 2019"
@@ -56,4 +56,34 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE display_7_segmentos.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_location_assignment PIN_G18 -to sd1[6]
+set_location_assignment PIN_F22 -to sd1[5]
+set_location_assignment PIN_E17 -to sd1[4]
+set_location_assignment PIN_L26 -to sd1[3]
+set_location_assignment PIN_L25 -to sd1[2]
+set_location_assignment PIN_J22 -to sd1[1]
+set_location_assignment PIN_H22 -to sd1[0]
+set_location_assignment PIN_M24 -to sd2[6]
+set_location_assignment PIN_Y22 -to sd2[5]
+set_location_assignment PIN_W21 -to sd2[4]
+set_location_assignment PIN_W22 -to sd2[3]
+set_location_assignment PIN_W25 -to sd2[2]
+set_location_assignment PIN_U23 -to sd2[1]
+set_location_assignment PIN_U24 -to sd2[0]
+set_location_assignment PIN_AA25 -to sd3[6]
+set_location_assignment PIN_AA26 -to sd3[5]
+set_location_assignment PIN_Y25 -to sd3[4]
+set_location_assignment PIN_W26 -to sd3[3]
+set_location_assignment PIN_Y26 -to sd3[2]
+set_location_assignment PIN_W27 -to sd3[1]
+set_location_assignment PIN_W28 -to sd3[0]
+set_location_assignment PIN_V21 -to sd4[6]
+set_location_assignment PIN_U21 -to sd4[5]
+set_location_assignment PIN_AB20 -to sd4[4]
+set_location_assignment PIN_AA21 -to sd4[3]
+set_location_assignment PIN_Y19 -to sd4[0]
+set_location_assignment PIN_AD24 -to sd4[2]
+set_location_assignment PIN_AF23 -to sd4[1]
