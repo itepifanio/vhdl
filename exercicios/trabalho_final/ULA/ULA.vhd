@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity ULA is 
-	port(a,b: in std_logic_vector(15 downto 0);
+	port(a,b: inout std_logic_vector(15 downto 0);
 		  -- 000 A+B
 		  -- 001 A-B
 		  -- 010 A << 1
@@ -41,6 +41,9 @@ architecture arq of ULA is
 	signal a_mais_b, a_menos_b, a_mais_1, a_menos_1: std_logic_vector(15 downto 0);
 
 	begin
+		a <= "0000000000000011";
+		b <= "0000000000000001";
+		
 		a0: inversor port map(b, invertido1);
 		a1: somador_8_bits port map(invertido1, "0000000000000001", aux_cout(0), complemento1); -- complemento de 2 de b
 		a2: somador_8_bits port map(a, complemento1, aux_cout(1), a_menos_b); -- a - b
