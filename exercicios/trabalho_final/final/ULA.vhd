@@ -66,10 +66,13 @@ architecture arq of ULA is
 					when "0110" => -- desloca direita
 						s <= '0' & a(15 downto 1);
 					when "1000" =>
+						s <= a_mais_b;
 						-- RB = m[RA + const]
 					when "1001" =>
+						s <= a_mais_b;
 						-- m[RA + const] = RB
 					when "1110" =>
+						s <= a_mais_b;
 						-- RB = RA + CONST
 				end case;
 		end process;
