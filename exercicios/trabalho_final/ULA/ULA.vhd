@@ -41,7 +41,7 @@ architecture arq of ULA is
 	signal a_mais_b, a_menos_b, a_mais_1, a_menos_1: std_logic_vector(15 downto 0);
 
 	begin
-		a <= "0000000000000011";
+		a <= "0100001100100001";
 		b <= "0000000000000001";
 		
 		a0: inversor port map(b, invertido1);

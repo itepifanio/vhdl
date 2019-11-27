@@ -28,6 +28,5 @@ architecture arq of display_7_segmentos is
 			"0110000" when "1110", -- 'E'
 			"0111000" when "1111", -- 'F'
 			"1111111" when others;
-	
 		saida <= s;
 end architecture;
