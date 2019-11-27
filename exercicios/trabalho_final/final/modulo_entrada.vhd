@@ -3,12 +3,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity modulo_entrada is
 	PORT (
-            clk, bt1, bt2, bt3: IN STD_LOGIC;
-            instrucao: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-            reset, ler_valor, exec_op: OUT STD_LOGIC;
-            op: OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
-            endereco_a, endereco_b, endereco_c: OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
-            const: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+			clk, bt1, bt2, bt3: IN STD_LOGIC;
+			instrucao: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+			reset, ler_valor, exec_op: OUT STD_LOGIC;
+			op: OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+			endereco_a, endereco_b, endereco_c, endereco_misterioso: OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
         );
 end entity;
 
@@ -47,7 +46,8 @@ architecture arq of modulo_entrada is
 							op <= op_atual;
 							endereco_a <= instrucao(11) & instrucao(10) & instrucao(9);
 							endereco_b <= instrucao(8) & instrucao(7) & instrucao(6);
-							const <= "0000000000" & op_atual(5 DOWNTO 0);
+							endereco_c <= op_atual(5 DOWNTO 3); -- constante
+							endereco_misterioso <= op_atual(2 downto 0); -- constante
 						end if;
 					end if;
 				end if;						
