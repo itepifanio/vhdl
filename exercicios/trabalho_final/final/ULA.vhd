@@ -14,6 +14,7 @@ entity ULA is
 		  -- 1001 m[A + const] = B
 		  -- 1110 B = A + const
 		  op: in std_logic_vector(3 downto 0);
+		  can_op: in std_logic; -- verifica se posso operar
 		  s: inout std_logic_vector(15 downto 0);
 		  sd1, sd2, sd3, sd4 : out std_logic_vector(6 downto 0)
    );
@@ -50,31 +51,32 @@ architecture arq of ULA is
 		a4: somador_8_bits port map(a,"0000000000000001",aux_cout(3),a_mais_1); -- a + 1
 		process(a,b,op) is
 			begin
-				case(op) is
-					when "0000" =>
+				if(can_op = '1') then
+					if(op = "0000") then
 						s <= a_mais_b;
-					when "0001" =>
+					elsif(op = "0001") then
 						s <= a_menos_b;
-					when "0010" =>
+					elsif(op = "0010") then
 						s <= a and b;
-					when "0011" =>
+					elsif(op = "0011") then
 						s <= a nor b;
-					when "0100" =>
+					elsif(op = "0100") then
 						s <= a or b;
-					when "0101" => -- desloca esquerda
+					elsif(op = "0101") then -- desloca esquerda
 						s <= a(14 downto 0) & '0'; 
-					when "0110" => -- desloca direita
+					elsif(op = "0110") then -- desloca direita
 						s <= '0' & a(15 downto 1);
-					when "1000" =>
+					elsif(op = "1000") then
 						s <= a_mais_b;
 						-- RB = m[RA + const]
-					when "1001" =>
+					elsif(op = "1001") then
 						s <= a_mais_b;
 						-- m[RA + const] = RB
-					when "1110" =>
+					elsif(op = "1110") then
 						s <= a_mais_b;
 						-- RB = RA + CONST
-				end case;
+					end if;
+				end if;
 		end process;
 		
 		a5: display_7_segmentos port map(s(3 downto 0), dis1);
