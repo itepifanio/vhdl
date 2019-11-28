@@ -2,45 +2,63 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity final is 
-	port(num: in std_logic_vector(15 downto 0); -- switches da placa
---		  reset: in std_logic;
---		  operar: in std_logic;
---		  validar: in std_logic;
-		  clk: in std_logic;
-		  ler_a: in std_logic;
-		  ler_b: in std_logic;
---		  d1,d2,d3,d4: out std_logic_vector(6 downto 0); -- ver com epitacio se iremos deixar na ula ou aqui
-		  led_termino: out std_logic);
+	PORT (clk, bt1, bt2, bt3: IN STD_LOGIC;
+			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0));
 end entity;
 
-architecture arq of final is
-	component ULA 
-		port(a,b: inout std_logic_vector(15 downto 0);
-		  -- 0000 A+B
-		  -- 0001 A-B
-		  -- 0010 A and 1
-		  -- 0011 A nor 1
-		  -- 0100 A or B
-		  -- 0101 A << 1
-		  -- 0110 A >> 1
-		  -- 1000 B = m[A + const]
-		  -- 1001 m[A + const] = B
-		  -- 1110 B = A + const
-		  op: in std_logic_vector(3 downto 0);
-		  s: inout std_logic_vector(15 downto 0);
-		  sd1, sd2, sd3, sd4 : out std_logic_vector(6 downto 0)
-		 );
+architecture arq of final is	
+	component modulo_entrada is
+		port(clk, bt1, bt2, bt3: IN STD_LOGIC;
+			  instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+			  reset, escrever_valor, exec_op: OUT STD_LOGIC;
+			  op: OUT STD_LOGIC_VECTOR (3 DOWNTO 0); -- pedaco da instrucao
+			  instrucao_out: OUT STD_LOGIC_VECTOR (17 DOWNTO 0)); --pedaco da instrucao
 	end component;
 	
-	component ram 
-		port (
-        clock  : in std_logic;
-        wren   : in std_logic;
-        addr   : in std_logic_vector(15 downto 0);
-        data_i : in std_logic_vector(15 downto 0);
-        data_o : out std_logic_vector(15 downto 0)
-    );
+	component modulo_acesso is
+		PORT (
+				clk, escrever_valor, exec_op: IN STD_LOGIC;
+				instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+				valor_banco_regs: IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor vindo do banco de registradores
+				valor_ula: IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor vindo da ula
+				seletor: OUT STD_LOGIC_VECTOR (2 DOWNTO 0); -- registrador que vai para o banco
+				ler_escrever: OUT STD_LOGIC; -- diz se escrita ou leitura para o banco de reg
+				valor_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor que vai para o banco de registradores
+				exec_op_out: OUT STD_LOGIC; -- diz pra ULA que pode operar
+				escrever_valor_out: OUT STD_LOGIC; -- diz pro banco se pode escrever ou ler o valor
+				a, b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- saidas da ULA
+			  );
 	end component;
+	
+	component banco_registradores IS
+		PORT 	(  
+            clk, ler_escrever, resetar: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
+            entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+            seletor: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+            saida: OUT STD_LOGIC_VECTOR (15 DOWNTO 0));
+	END component;
+	
+	component ULA 
+		port(a,b: inout std_logic_vector(15 downto 0);
+		     op: in std_logic_vector(3 downto 0);
+		     can_op: in std_logic; -- verifica se posso operar
+		     s: inout std_logic_vector(15 downto 0);
+		     sd1, sd2, sd3, sd4 : out std_logic_vector(6 downto 0));
+	end component;
+	
+	signal aux_seletor: STD_LOGIC_VECTOR (2 DOWNTO 0);
+	signal aux_valor_ula, aux_valor_banco_regs, aux_valor_out, aux_a, aux_b: STD_LOGIC_VECTOR (15 DOWNTO 0);
+	signal aux_instrucao_out: STD_LOGIC_VECTOR (15 DOWNTO 0);
+	signal aux_ler_escrever, aux_reset, aux_escrever_valor, aux_exec_op, aux_escrever_valor_out, aux_exec_op_out: STD_LOGIC;
+	signal aux_op: STD_LOGIC_VECTOR(3 DOWNTO 0);
+	signal aux_sd1, aux_sd2, aux_sd3, aux_sd4: std_logic_vector(6 downto 0);
+	
+	begin
+		i1: modulo_acesso port map (clk, bt1, bt2, aux_instrucao_out, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b);
+		i2: modulo_entrada port map(clk, bt1, bt2, bt3, instrucao, aux_reset, aux_escrever_valor, aux_exec_op, aux_op, aux_instrucao_out);
+		i3: banco_registradores port map(clk, bt1, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
+		i4: ULA port map (aux_a, aux_b, aux_op, aux_valor_ula, aux_sd1, aux_sd2, aux_sd3, aux_sd4);
+		
 end architecture;
 
 

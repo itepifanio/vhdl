@@ -3,16 +3,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity modulo_acesso is
 	PORT (
-			clk, escrever_valor, exec_op: IN STD_LOGIC;
-			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
-			seletor: OUT STD_LOGIC_VECTOR (2 DOWNTO 0); -- registrador que vai para o banco
-			valor_banco_regs: IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor vindo do banco de registradores
-			valor_ula: IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor vindo da ula
-			ler_escrever: OUT STD_LOGIC; -- diz se escrita ou leitura para o banco de reg
-			valor_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor que vai para o banco de registradores
-			exec_op_out: OUT STD_LOGIC; -- diz pra ULA que pode operar
-			a, b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- saidas da ULA
-        );
+				clk, escrever_valor, exec_op: IN STD_LOGIC;
+				instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+				valor_banco_regs: IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor vindo do banco de registradores
+				valor_ula: IN STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor vindo da ula
+				seletor: OUT STD_LOGIC_VECTOR (2 DOWNTO 0); -- registrador que vai para o banco
+				ler_escrever: OUT STD_LOGIC; -- diz se escrita ou leitura para o banco de reg
+				valor_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor que vai para o banco de registradores
+				exec_op_out: OUT STD_LOGIC; -- diz pra ULA que pode operar
+				escrever_valor_out: OUT STD_LOGIC; -- diz pro banco se pode escrever ou ler o valor
+				a, b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- saidas da ULA
+			  );
 end entity;
 
 architecture arq of modulo_acesso is

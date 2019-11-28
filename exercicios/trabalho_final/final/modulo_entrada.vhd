@@ -9,7 +9,7 @@ entity modulo_entrada is
 			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
 			reset, escrever_valor, exec_op: OUT STD_LOGIC;
 			op: OUT STD_LOGIC_VECTOR (3 DOWNTO 0); -- pedaco da instrucao
-			endereco_a, endereco_b, endereco_c, endereco_d: OUT STD_LOGIC_VECTOR (2 DOWNTO 0); --pedaco da instrucao
+			intrucao_out: OUT STD_LOGIC_VECTOR (17 DOWNTO 0) --pedaco da instrucao
         );
 end entity;
 
@@ -38,17 +38,19 @@ architecture arq of modulo_entrada is
 						if(op_atual = "0000" OR op_atual = "1000" OR op_atual = "0010" OR op_atual = "1010" OR op_atual = "1011") then
 							-- esse if leva todas as operacoes com endereco_a, endereco_b e endereco_c
 							op <= op_atual;
-							endereco_a <= instrucao(13 downto 11); -- RA
-							endereco_b <= instrucao(10 downto 8); -- RB
-							endereco_c <= instrucao(7 downto 5); -- RC
-							endereco_d <= "000"; -- 0
+							intrucao_out <= instrucao;
+--							endereco_a <= instrucao(13 downto 11); -- RA
+--							endereco_b <= instrucao(10 downto 8); -- RB
+--							endereco_c <= instrucao(7 downto 5); -- RC
+--							endereco_d <= "000"; -- 0
 						end if;
 						if(op_atual = "0001" OR op_atual = "0011" OR op_atual = "0100" OR op_atual = "0101" OR op_atual = "0110" OR op_atual = "0111" OR op_atual = "1001" OR op_atual = "1100" OR op_atual = "1110") then
 							op <= op_atual;
-							endereco_a <= instrucao(13 downto 11); -- RA
-							endereco_b <= instrucao(10 downto 8); -- RB
-							endereco_c <= instrucao(7 downto 5); -- constante
-							endereco_d <= instrucao(4 downto 2); -- constante
+--							endereco_a <= instrucao(13 downto 11); -- RA
+--							endereco_b <= instrucao(10 downto 8); -- RB
+--							endereco_c <= instrucao(7 downto 5); -- constante
+--							endereco_d <= instrucao(4 downto 2); -- constante
+							intrucao_out <= instrucao;
 						end if;
 					end if;
 				end if;						
