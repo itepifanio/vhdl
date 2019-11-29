@@ -3,7 +3,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity final is 
 	PORT (clk, bt1, bt2, bt3: IN STD_LOGIC;
-			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0));
+			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+			sd1, sd2, sd3, sd4 : out std_logic_vector(6 downto 0));
 end entity;
 
 architecture arq of final is	
