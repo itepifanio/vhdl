@@ -99,6 +99,6 @@ ARCHITECTURE arq OF banco_registradores IS
 						  END IF;
 						END IF;
 					END IF;
-			  END IF;
+--			  END IF;
 		END PROCESS;
 END ARCHITECTURE;

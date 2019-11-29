@@ -30,8 +30,8 @@ architecture arq of modulo_saida is
 		);
     end component;
 
-    signal registrador_a std_logic_vector(2 downto 0);  -- Endereço do registrador para salvar o valor recebido da ula
-    signal registrador_a_saida std_logic_vector(15 downto 0); -- Saída do valo armazenado no registrador_a
+    signal registrador_a: std_logic_vector(2 downto 0);  -- Endereço do registrador para salvar o valor recebido da ula
+    signal registrador_a_saida: std_logic_vector(15 downto 0); -- Saída do valo armazenado no registrador_a
     begin      
         process(clock, entrada_ULA, op_fim)
         begin
@@ -40,12 +40,14 @@ architecture arq of modulo_saida is
                 else leds_saida(0) <= '1';     -- Significa que a operação será realizada novamente
                 end if;
             end if;
+				
+			for i in 4 to 6 loop      -- Percorremos a instrução para recuperar o endereço do registrador A
+            registrador_a <= registrador_a&instrucao(i);
+			end loop;
+		  
         end process;
 
         -- ARMAZENANDO O VALOR OBTIDO DA ULA
-        for i in 4 to 6 loop      -- Percorremos a instrução para recuperar o endereço do registrador A
-            registrador_a <= registrador_a&instrucao(i);
-        end loop;
 
         ra: banco_registradores port map(       -- Armazenamos o resultado no registrador A
             clock, '1', '0',
