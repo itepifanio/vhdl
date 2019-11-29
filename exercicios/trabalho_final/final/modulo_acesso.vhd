@@ -12,7 +12,8 @@ entity modulo_acesso is
 				valor_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- valor que vai para o banco de registradores
 				exec_op_out: OUT STD_LOGIC; -- diz pra ULA que pode operar
 				escrever_valor_out: OUT STD_LOGIC; -- diz pro banco se pode escrever ou ler o valor
-				a, b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- saidas da ULA
+				a, b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- saidas da ULA
+				l1, l2, l3, l4: OUT STD_LOGIC -- LEDS para testar o PO
 			  );
 end entity;
 
@@ -32,6 +33,7 @@ architecture arq of modulo_acesso is
 						ler_escrever <= '1'; -- manda o banco escrever
 						seletor <= '0' & instrucao(1 DOWNTO 0);
 						valor_out <= instrucao(17 DOWNTO 2);
+						l4 <= '1';
 						-- | 16 bits (valor) | 2 bits (reg destino) |
 					end if;
 			
@@ -45,18 +47,31 @@ architecture arq of modulo_acesso is
 						seletor <= instrucao(10 downto 8); -- regB
 						pc <= ler_a;
 						exec_op_out <= '0'; -- atribuindo zero just in case
-					elsif(pc = ler_a) then
+						l1 <= '1';
+					else
+						l1 <= '0';
+					end if;
+					
+					if(pc = ler_a) then
 						a <= valor_banco_regs;
 						ler_escrever <= '0';
 						seletor <= instrucao(7 downto 5); -- regC
 						pc <= ler_b;
-					elsif(pc = ler_b) then
+						l2 <= '1';
+					else
+						l2 <= '0';
+					end if;
+					
+					if(pc = ler_b) then
 						b <= valor_banco_regs;
 						ler_escrever <= '1'; -- manda o banco escrever
 						seletor <= instrucao(13 downto 11); -- regA
 						valor_out <= valor_ula; -- talvez tenha que mandar um sinal pra ULA pra poder dizer "opere"
 						pc <= init;
 						exec_op_out <= '1';
+						l3 <= '1';
+					else
+						l3 <= '0';
 					end if;
 				end if;
 		end process;
