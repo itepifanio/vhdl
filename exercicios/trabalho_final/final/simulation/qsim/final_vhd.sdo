@@ -19,17 +19,17 @@
 
 //
 // This file contains Slow Corner delays for the design using part EP4CE6E22C6,
-// with speed grade 6, core voltage 1.2VmV, and temperature 0 Celsius
+// with speed grade 6, core voltage 1.2VmV, and temperature 85 Celsius
 //
 
 // 
-// This SDF file should be used for ModelSim-Altera (Verilog) only
+// This SDF file should be used for ModelSim-Altera (VHDL) only
 // 
 
 (DELAYFILE
   (SDFVERSION "2.1")
-  (DESIGN "\final ")
-  (DATE "11/29/2019 15:39:10")
+  (DESIGN "final")
+  (DATE "11/29/2019 15:54:17")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")

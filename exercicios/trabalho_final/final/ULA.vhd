@@ -80,6 +80,7 @@ architecture arq of ULA is
 				end if;
 		end process;
 		
+		
 --		a5: display_7_segmentos port map(s(3 downto 0), dis1);
 --		a6: display_7_segmentos port map(s(7 downto 4), dis2);
 --		a7: display_7_segmentos port map(s(11 downto 8), dis3);

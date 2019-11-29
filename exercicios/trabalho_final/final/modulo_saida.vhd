@@ -41,20 +41,21 @@ architecture arq of modulo_saida is
                 end if;
             end if;
 				
-			for i in 4 to 6 loop      -- Percorremos a instrução para recuperar o endereço do registrador A
-            registrador_a <= registrador_a&instrucao(i);
-			end loop;
+			
+--			for i in 4 to 6 loop      -- Percorremos a instrução para recuperar o endereço do registrador A
+--            registrador_a <= registrador_a&instrucao(i);
+--			end loop;
 		  
         end process;
 
         -- ARMAZENANDO O VALOR OBTIDO DA ULA
-
-        ra: banco_registradores port map(       -- Armazenamos o resultado no registrador A
-            clock, '1', '0',
-            entrada_ULA,
-            registrador_a,
-            registrador_a_saida 
-        );
+			registrador_a <= instrucao(4)&instrucao(5)&instrucao(6);
+		  ra: banco_registradores port map(       -- Armazenamos o resultado no registrador A
+				clock, '1', '0',
+				entrada_ULA,
+				registrador_a,
+				registrador_a_saida 
+		  );
                 
         -- UTILIZANDO DISPLAY PARA MOSTRAR O RESULTADO
         da: display_7_segmentos port map(registrador_a_saida(3 downto 0), display_a);
