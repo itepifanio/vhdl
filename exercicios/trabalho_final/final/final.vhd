@@ -3,7 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity final is 
 	PORT (clk, bt1, bt2, bt3: IN STD_LOGIC;
-			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0));
+			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
+			sd1, sd2, sd3, sd4: OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+	);
 end entity;
 
 architecture arq of final is	
@@ -71,7 +73,7 @@ architecture arq of final is
 		i2: modulo_acesso port map (clk, bt1, bt2, aux_instrucao_out, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b);
 		i3: banco_registradores port map(clk, bt1, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
 		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula); -- exec_op_out  
-		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, aux_sd1, aux_sd2, aux_sd3, aux_sd4);
+		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, sd1, sd2, sd3, sd4);
 end architecture;
 
 

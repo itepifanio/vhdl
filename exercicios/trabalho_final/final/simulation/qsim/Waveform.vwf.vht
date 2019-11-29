@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/29/2019 15:59:53"
+-- Generated on "11/29/2019 17:11:17"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
@@ -38,13 +38,21 @@ SIGNAL bt2 : STD_LOGIC;
 SIGNAL bt3 : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
 SIGNAL instrucao : STD_LOGIC_VECTOR(17 DOWNTO 0);
+SIGNAL sd1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL sd2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL sd3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL sd4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 COMPONENT final
 	PORT (
 	bt1 : IN STD_LOGIC;
 	bt2 : IN STD_LOGIC;
 	bt3 : IN STD_LOGIC;
 	clk : IN STD_LOGIC;
-	instrucao : IN STD_LOGIC_VECTOR(17 DOWNTO 0)
+	instrucao : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+	sd1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -55,7 +63,11 @@ BEGIN
 	bt2 => bt2,
 	bt3 => bt3,
 	clk => clk,
-	instrucao => instrucao
+	instrucao => instrucao,
+	sd1 => sd1,
+	sd2 => sd2,
+	sd3 => sd3,
+	sd4 => sd4
 	);
 
 -- bt1
