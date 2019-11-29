@@ -32,7 +32,7 @@ architecture arq of modulo_entrada is
 						op_atual <= instrucao(17 downto 14);
 					end if;
 					if(bt3 = '1') then
-						reset <= 0';
+						reset <= '0';
 						escrever_valor <= '0';
 						exec_op <= '1';
 						if(op_atual = "0000" OR op_atual = "1000" OR op_atual = "0010" OR op_atual = "1010" OR op_atual = "1011") then
