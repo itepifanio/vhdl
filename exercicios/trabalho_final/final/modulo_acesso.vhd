@@ -25,7 +25,7 @@ architecture arq of modulo_acesso is
 	constant escrever_em_c: STD_LOGIC_VECTOR (1 DOWNTO 0) := "11";
 	signal pc: STD_LOGIC_VECTOR (1 DOWNTO 0) := init; -- sinal auxiliar para a PC
 	begin
-		process(clk, exec_op)
+		process(clk, escrever_valor, exec_op, instrucao, valor_banco_regs, valor_ula)
 			begin
 				if (clk'event and clk = '1') then
 					if(escrever_valor = '1') then

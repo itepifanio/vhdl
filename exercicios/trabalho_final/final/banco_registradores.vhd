@@ -56,49 +56,48 @@ ARCHITECTURE arq OF banco_registradores IS
 								saida <= reg1;
 							END IF;    
 						ELSIF (seletor="001") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00000010";
-						  ELSE
+							ELSE
 								saida <= reg2;
-						  END IF;
+							END IF;
 						ELSIF (seletor="010") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00000100";
-						  ELSE
+							ELSE
 								saida <= reg3;
-						  END IF;
+							END IF;
 						ELSIF (seletor="011") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00001000";
-						  ELSE
+							ELSE
 								saida <= reg4;
-						  END IF;
+							END IF;
 						ELSIF (seletor="100") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00010000";
-						  ELSE
+							ELSE
 								saida <= reg5;
-						  END IF;
+							END IF;
 						ELSIF (seletor="101") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00100000";
-						  ELSE
+							ELSE
 								saida <= reg6;
-						  END IF;
+							END IF;
 						ELSIF (seletor="110") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "01000000";
-						  ELSE
+							ELSE
 								saida <= reg7;
-						  END IF;
+							END IF;
 						ELSIF (seletor="111") THEN
-						  IF (ler_escrever='1') THEN
+							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "10000000";
-						  ELSE
+							ELSE
 								saida <= reg8;
-						  END IF;
+							END IF;
 						END IF;
-					END IF;
---			  END IF;
+				END IF;
 		END PROCESS;
 END ARCHITECTURE;

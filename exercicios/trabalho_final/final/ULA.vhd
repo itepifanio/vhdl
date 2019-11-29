@@ -15,7 +15,7 @@ entity ULA is
 		  -- 1110 B = A + const
 		  op: in std_logic_vector(3 downto 0);
 		  can_op: in std_logic; -- verifica se posso operar
-		  s: inout std_logic_vector(15 downto 0);
+		  s: inout std_logic_vector(15 downto 0)
 --		  sd1, sd2, sd3, sd4 : out std_logic_vector(6 downto 0)
    );
 end entity;
@@ -24,11 +24,12 @@ architecture arq of ULA is
 	component somador_8_bits is
 		port(a,b: in std_logic_vector(15 downto 0);
 			  cout: out std_logic;
-			  s: out std_logic_vector(15 downto 0));
+			  s: out std_logic_vector(15 downto 0)
+			  );
 	end component;
 	
 	component inversor is
-		Port (a: in  STD_LOGIC_VECTOR(15 downto 0);
+		port (a: in  STD_LOGIC_VECTOR(15 downto 0);
             s: out  STD_LOGIC_VECTOR(15 downto 0));
 	end component;
 	

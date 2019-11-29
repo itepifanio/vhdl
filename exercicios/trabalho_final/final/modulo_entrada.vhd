@@ -9,7 +9,7 @@ entity modulo_entrada is
 			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
 			reset, escrever_valor, exec_op: OUT STD_LOGIC;
 			op: OUT STD_LOGIC_VECTOR (3 DOWNTO 0); -- pedaco da instrucao
-			intrucao_out: OUT STD_LOGIC_VECTOR (17 DOWNTO 0) --pedaco da instrucao
+			instrucao_out: OUT STD_LOGIC_VECTOR (17 DOWNTO 0) --pedaco da instrucao
         );
 end entity;
 
@@ -32,13 +32,13 @@ architecture arq of modulo_entrada is
 						op_atual <= instrucao(17 downto 14);
 					end if;
 					if(bt3 = '1') then
-						reset <= 0';
+						reset <= '0';
 						escrever_valor <= '0';
 						exec_op <= '1';
 						if(op_atual = "0000" OR op_atual = "1000" OR op_atual = "0010" OR op_atual = "1010" OR op_atual = "1011") then
 							-- esse if leva todas as operacoes com endereco_a, endereco_b e endereco_c
 							op <= op_atual;
-							intrucao_out <= instrucao;
+							instrucao_out <= instrucao;
 --							endereco_a <= instrucao(13 downto 11); -- RA
 --							endereco_b <= instrucao(10 downto 8); -- RB
 --							endereco_c <= instrucao(7 downto 5); -- RC
@@ -50,7 +50,7 @@ architecture arq of modulo_entrada is
 --							endereco_b <= instrucao(10 downto 8); -- RB
 --							endereco_c <= instrucao(7 downto 5); -- constante
 --							endereco_d <= instrucao(4 downto 2); -- constante
-							intrucao_out <= instrucao;
+							instrucao_out <= instrucao;
 						end if;
 					end if;
 				end if;						
