@@ -55,8 +55,8 @@ architecture arq of final is
 --	signal aux_sd1, aux_sd2, aux_sd3, aux_sd4: std_logic_vector(6 downto 0);
 	
 	begin
-		i1: modulo_acesso port map (clk, bt1, bt2, aux_instrucao_out, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b);
-		i2: modulo_entrada port map(clk, bt1, bt2, bt3, instrucao, aux_reset, aux_escrever_valor, aux_exec_op, aux_op, aux_instrucao_out);
+		i1: modulo_entrada port map(clk, bt1, bt2, bt3, instrucao, aux_reset, aux_escrever_valor, aux_exec_op, aux_op, aux_instrucao_out);
+		i2: modulo_acesso port map (clk, bt1, bt2, aux_instrucao_out, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b);
 		i3: banco_registradores port map(clk, bt1, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
 		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula); -- exec_op_out  
 end architecture;
