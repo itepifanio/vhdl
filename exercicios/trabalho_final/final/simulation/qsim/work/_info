@@ -9,30 +9,30 @@ z2
 cModel Technology
 Z0 d/home/usuario/Documentos/vhdl/exercicios/trabalho_final/final/simulation/qsim
 Efinal
-Z1 w1575058279
+Z1 w1575147158
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
-R0
-Z8 8final.vho
-Z9 Ffinal.vho
+Z8 d/home/epitacio/bti/vhdl/exercicios/trabalho_final/final/simulation/qsim
+Z9 8final.vho
+Z10 Ffinal.vho
 l0
 L77
 Vz>iBeghH2HKCj7SeXDBaf0
 !s100 Ic7M94OFDL@MH7zSSnig;1
-Z10 OV;C;10.5b;63
+Z11 OV;C;10.5b;63
 32
-Z11 !s110 1575058280
+Z12 !s110 1575147159
 !i10b 1
-Z12 !s108 1575058280.000000
-Z13 !s90 -work|work|final.vho|
-Z14 !s107 final.vho|
+Z13 !s108 1575147159.000000
+Z14 !s90 -work|work|final.vho|
+Z15 !s107 final.vho|
 !i113 1
-Z15 o-work work
-Z16 tExplicit 1 CvgOpt 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -45,55 +45,55 @@ l221
 L144
 Vj4:cUhBoiPbXgEmE`KjZ?2
 !s100 oZW3F:;m;QYcIamjKnVNS1
-R10
-32
 R11
-!i10b 1
+32
 R12
+!i10b 1
 R13
 R14
-!i113 1
 R15
+!i113 1
 R16
+R17
 Efinal_vhd_vec_tst
-Z17 w1575058277
+Z18 w1575147157
 R5
 R6
-R0
-Z18 8Waveform.vwf.vht
-Z19 FWaveform.vwf.vht
+R8
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
 l0
 L31
 Vn5[i<;d^2if;_k<6Vl>JY2
 !s100 80@dn6G;^TW_N>h?hc3DX3
-R10
-32
 R11
-!i10b 1
+32
 R12
-Z20 !s90 -work|work|Waveform.vwf.vht|
-Z21 !s107 Waveform.vwf.vht|
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
 !i113 1
-R15
 R16
+R17
 Afinal_arch
 R5
 R6
-Z22 DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
+Z23 DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
 l58
 L33
-Z23 VjjBBeH;B0C@9J2SRfh1CM1
-Z24 !s100 mM^9BI[0UaIj:3Y3FkKgN2
-R10
-32
+Z24 VjjBBeH;B0C@9J2SRfh1CM1
+Z25 !s100 mM^9BI[0UaIj:3Y3FkKgN2
 R11
-!i10b 1
+32
 R12
-R20
+!i10b 1
+R13
 R21
+R22
 !i113 1
-R15
 R16
+R17
 Ehard_block
 R1
 R2
@@ -102,23 +102,23 @@ R4
 R5
 R6
 R7
-R0
 R8
 R9
+R10
 l0
 L34
 VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
-R10
-32
 R11
-!i10b 1
+32
 R12
+!i10b 1
 R13
 R14
-!i113 1
 R15
+!i113 1
 R16
+R17
 Astructure
 R2
 R3
@@ -131,13 +131,13 @@ l64
 L50
 V`^CmQg<48W[ez[JL_5@Yn2
 !s100 2S?JL;LJ@<3:BHXTNcXS]3
-R10
-32
 R11
-!i10b 1
+32
 R12
+!i10b 1
 R13
 R14
-!i113 1
 R15
+!i113 1
 R16
+R17
