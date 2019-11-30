@@ -13,8 +13,9 @@ END ENTITY;
 ARCHITECTURE arq OF banco_registradores IS
 	COMPONENT registrador IS
 	PORT 	(
+					clk: IN STD_LOGIC;
 					i: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-					clk, load, clear: IN STD_LOGIC;
+					load, clear: IN STD_LOGIC;
 					q: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 			);
 	END COMPONENT;
@@ -31,16 +32,16 @@ ARCHITECTURE arq OF banco_registradores IS
 	SIGNAL registrador_clear: STD_LOGIC_VECTOR (7 DOWNTO 0) := "00000000";
 
 	BEGIN
-		r1: registrador PORT MAP (entrada, clk, registrador_escolhido(0), registrador_clear(0), reg1);
-		r2: registrador PORT MAP (entrada, clk, registrador_escolhido(1), registrador_clear(1), reg2);
-		r3: registrador PORT MAP (entrada, clk, registrador_escolhido(2), registrador_clear(2), reg3);
-		r4: registrador PORT MAP (entrada, clk, registrador_escolhido(3), registrador_clear(3), reg4);
-		r5: registrador PORT MAP (entrada, clk, registrador_escolhido(4), registrador_clear(4), reg5);
-		r6: registrador PORT MAP (entrada, clk, registrador_escolhido(5), registrador_clear(5), reg6);
-		r7: registrador PORT MAP (entrada, clk, registrador_escolhido(6), registrador_clear(6), reg7);
-		r8: registrador PORT MAP (entrada, clk, registrador_escolhido(7), registrador_clear(7), reg8);
+		r1: registrador PORT MAP (clk, entrada, registrador_escolhido(0), registrador_clear(0), reg1);
+		r2: registrador PORT MAP (clk, entrada, registrador_escolhido(1), registrador_clear(1), reg2);
+		r3: registrador PORT MAP (clk, entrada, registrador_escolhido(2), registrador_clear(2), reg3);
+		r4: registrador PORT MAP (clk, entrada, registrador_escolhido(3), registrador_clear(3), reg4);
+		r5: registrador PORT MAP (clk, entrada, registrador_escolhido(4), registrador_clear(4), reg5);
+		r6: registrador PORT MAP (clk, entrada, registrador_escolhido(5), registrador_clear(5), reg6);
+		r7: registrador PORT MAP (clk, entrada, registrador_escolhido(6), registrador_clear(6), reg7);
+		r8: registrador PORT MAP (clk, entrada, registrador_escolhido(7), registrador_clear(7), reg8);
 
-		PROCESS(clk, ler_escrever)
+		PROCESS(ler_escrever, resetar, entrada)
 			BEGIN
 				IF (clk'event AND clk='1') THEN
 						IF (resetar='1') THEN

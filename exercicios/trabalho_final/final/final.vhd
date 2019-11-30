@@ -5,7 +5,11 @@ entity final is
 	PORT (clk, bt1, bt2, bt3: IN STD_LOGIC;
 			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
 			sd1, sd2, sd3, sd4: OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-			l1, l2, l3, l4: OUT STD_LOGIC);
+			l1, l2, l3, l4: OUT STD_LOGIC;
+			valor_ula_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste)
+			valor_banco_regs_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste));
+			debug_reg: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- (teste));
+			);
 end entity;
 
 architecture arq of final is	
@@ -29,7 +33,9 @@ architecture arq of final is
 				exec_op_out: OUT STD_LOGIC; -- diz pra ULA que pode operar
 				escrever_valor_out: OUT STD_LOGIC; -- diz pro banco se pode escrever ou ler o valor
 				a, b: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- saidas da ULA
-				l1, l2, l3, l4: OUT STD_LOGIC
+				l1, l2, l3, l4: OUT STD_LOGIC;
+				valor_ula_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste)
+				valor_banco_regs_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- (teste)
 			  );
 	end component;
 	
@@ -71,10 +77,11 @@ architecture arq of final is
 	signal aux_op_end: STD_LOGIC := '1';
 	begin
 		i1: modulo_entrada port map(clk, bt1, bt2, bt3, instrucao, aux_reset, aux_escrever_valor, aux_exec_op, aux_op, aux_instrucao_out);
-		i2: modulo_acesso port map (clk, bt1, bt2, aux_instrucao_out, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b, l1, l2, l3, l4);
+		i2: modulo_acesso port map (clk, bt1, bt2, instrucao, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b, l1, l2, l3, l4, valor_banco_regs_out, valor_ula_out);
 		i3: banco_registradores port map(clk, bt1, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
-		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula); -- exec_op_out  
+		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula);  
 		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, sd1, sd2, sd3, sd4);
+		debug_reg <= aux_valor_banco_regs;
 end architecture;
 
 
