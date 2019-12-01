@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/30/2019 20:09:37"
+-- Generated on "12/01/2019 16:33:02"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
@@ -37,6 +37,10 @@ SIGNAL bt1 : STD_LOGIC;
 SIGNAL bt2 : STD_LOGIC;
 SIGNAL bt3 : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
+SIGNAL d_a : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL d_b : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL d_op_ula : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL d_ula : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL debug_reg : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instrucao : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL l1 : STD_LOGIC;
@@ -55,18 +59,22 @@ COMPONENT final
 	bt2 : IN STD_LOGIC;
 	bt3 : IN STD_LOGIC;
 	clk : IN STD_LOGIC;
-	debug_reg : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	d_a : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	d_b : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	d_op_ula : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	d_ula : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	debug_reg : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instrucao : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-	l1 : OUT STD_LOGIC;
-	l2 : OUT STD_LOGIC;
-	l3 : OUT STD_LOGIC;
-	l4 : OUT STD_LOGIC;
-	sd1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	sd2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	sd3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	sd4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	valor_banco_regs_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	valor_ula_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	l1 : BUFFER STD_LOGIC;
+	l2 : BUFFER STD_LOGIC;
+	l3 : BUFFER STD_LOGIC;
+	l4 : BUFFER STD_LOGIC;
+	sd1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	valor_banco_regs_out : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	valor_ula_out : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -77,6 +85,10 @@ BEGIN
 	bt2 => bt2,
 	bt3 => bt3,
 	clk => clk,
+	d_a => d_a,
+	d_b => d_b,
+	d_op_ula => d_op_ula,
+	d_ula => d_ula,
 	debug_reg => debug_reg,
 	instrucao => instrucao,
 	l1 => l1,
@@ -231,19 +243,15 @@ END PROCESS t_prcs_instrucao_5;
 t_prcs_instrucao_4: PROCESS
 BEGIN
 	instrucao(4) <= '0';
-	WAIT FOR 10000 ps;
+	WAIT FOR 160000 ps;
 	instrucao(4) <= '1';
-	WAIT FOR 310000 ps;
+	WAIT FOR 160000 ps;
 	instrucao(4) <= '0';
 WAIT;
 END PROCESS t_prcs_instrucao_4;
 -- instrucao[3]
 t_prcs_instrucao_3: PROCESS
 BEGIN
-	instrucao(3) <= '0';
-	WAIT FOR 10000 ps;
-	instrucao(3) <= '1';
-	WAIT FOR 310000 ps;
 	instrucao(3) <= '0';
 WAIT;
 END PROCESS t_prcs_instrucao_3;

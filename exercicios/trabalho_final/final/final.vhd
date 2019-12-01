@@ -6,7 +6,7 @@ entity final is
 			instrucao: IN STD_LOGIC_VECTOR (17 DOWNTO 0);
 			sd1, sd2, sd3, sd4: OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 			l1, l2, l3, l4: OUT STD_LOGIC;
-			valor_ula_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste)
+			d_ula, d_a, d_b, d_op_ula, valor_ula_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste)
 			valor_banco_regs_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste));
 			debug_reg: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- (teste));
 			);
@@ -82,6 +82,10 @@ architecture arq of final is
 		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula);  
 		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, sd1, sd2, sd3, sd4);
 		debug_reg <= aux_valor_banco_regs;
+		d_op_ula <= aux_valor_ula;
+		d_a <= aux_a;
+		d_b <= aux_b;
+		d_ula <= aux_valor_ula;
 end architecture;
 
 
