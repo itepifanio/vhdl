@@ -9,7 +9,7 @@ z2
 cModel Technology
 d/home/usuario/Documentos/vhdl/exercicios/trabalho_final/final/simulation/qsim
 Efinal
-Z0 w1575155378
+Z0 w1575226302
 Z1 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z2 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8final.vho
 Z11 Ffinal.vho
 l0
 L79
-V9WkDZ_<?L5?PJeL0B:`ij0
-!s100 H;_g2@DI;lKM^nn9n9;3C2
+V=NnVZ8;LM49k09?Q1Z<3d3
+!s100 5S7X<>fXzLYA2@9ioS6HN3
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1575155379
+Z13 !s110 1575226303
 !i10b 1
-Z14 !s108 1575155378.000000
+Z14 !s108 1575226303.000000
 Z15 !s90 -work|work|final.vho|
 Z16 !s107 final.vho|
 !i113 1
@@ -44,11 +44,11 @@ R5
 R6
 R7
 R8
-DEx4 work 5 final 0 22 9WkDZ_<?L5?PJeL0B:`ij0
-l772
-L205
-VeOC=6S4M`[_C^YePY;6P91
-!s100 hP0HdQ@^`cZJ07_^?Q<<Z3
+DEx4 work 5 final 0 22 =NnVZ8;LM49k09?Q1Z<3d3
+l564
+L243
+V0S5EMFU2VQ3anG11RFK`[0
+!s100 <fDm?K[l`S;1bX_68Y[QP0
 R12
 32
 R13
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Efinal_vhd_vec_tst
-Z19 w1575155377
+Z19 w1575226301
 R6
 R7
 R9
@@ -74,27 +74,27 @@ R12
 32
 R13
 !i10b 1
-Z22 !s108 1575155379.000000
-Z23 !s90 -work|work|Waveform2.vwf.vht|
-Z24 !s107 Waveform2.vwf.vht|
+R14
+Z22 !s90 -work|work|Waveform2.vwf.vht|
+Z23 !s107 Waveform2.vwf.vht|
 !i113 1
 R17
 R18
 Afinal_arch
 R6
 R7
-Z25 DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
-l72
+Z24 DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
+l78
 L33
-VR@l0_`O]LX<N_`RK9jVPj3
-!s100 Jh8H75Z1Y?[kI6LoZ;?bM3
+Z25 VRP?aWB?W^BAfizGIBae9F1
+Z26 !s100 Y_UUABimd_D?8B?XT1^Fz0
 R12
 32
 R13
 !i10b 1
+R14
 R22
 R23
-R24
 !i113 1
 R17
 R18

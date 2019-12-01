@@ -52,7 +52,7 @@ architecture arq of ULA is
 		a4: somador_8_bits port map(a,"0000000000000001",aux_cout(3),a_mais_1); -- a + 1
 		process(a,b,op) is
 			begin
-				if(can_op = '1') then
+--				if(can_op = '1') then
 					if(op = "0000") then
 						s <= a_mais_b;
 					elsif(op = "0001") then
@@ -77,7 +77,7 @@ architecture arq of ULA is
 						s <= a_mais_b;
 						-- RB = RA + CONST
 					end if;
-				end if;
+--				end if;
 		end process;
 		
 		

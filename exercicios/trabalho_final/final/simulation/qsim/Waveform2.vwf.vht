@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/30/2019 20:09:37"
+-- Generated on "12/01/2019 15:51:41"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
@@ -37,6 +37,9 @@ SIGNAL bt1 : STD_LOGIC;
 SIGNAL bt2 : STD_LOGIC;
 SIGNAL bt3 : STD_LOGIC;
 SIGNAL clk : STD_LOGIC;
+SIGNAL d_seletor : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL d_ula_a : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL d_ula_b : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL debug_reg : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instrucao : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL l1 : STD_LOGIC;
@@ -55,18 +58,21 @@ COMPONENT final
 	bt2 : IN STD_LOGIC;
 	bt3 : IN STD_LOGIC;
 	clk : IN STD_LOGIC;
-	debug_reg : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	d_seletor : BUFFER STD_LOGIC_VECTOR(2 DOWNTO 0);
+	d_ula_a : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	d_ula_b : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	debug_reg : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instrucao : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
-	l1 : OUT STD_LOGIC;
-	l2 : OUT STD_LOGIC;
-	l3 : OUT STD_LOGIC;
-	l4 : OUT STD_LOGIC;
-	sd1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	sd2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	sd3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	sd4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	valor_banco_regs_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	valor_ula_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	l1 : BUFFER STD_LOGIC;
+	l2 : BUFFER STD_LOGIC;
+	l3 : BUFFER STD_LOGIC;
+	l4 : BUFFER STD_LOGIC;
+	sd1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	sd4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	valor_banco_regs_out : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	valor_ula_out : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -77,6 +83,9 @@ BEGIN
 	bt2 => bt2,
 	bt3 => bt3,
 	clk => clk,
+	d_seletor => d_seletor,
+	d_ula_a => d_ula_a,
+	d_ula_b => d_ula_b,
 	debug_reg => debug_reg,
 	instrucao => instrucao,
 	l1 => l1,
@@ -94,12 +103,10 @@ BEGIN
 -- bt1
 t_prcs_bt1: PROCESS
 BEGIN
-	bt1 <= '0';
-	WAIT FOR 20000 ps;
 	bt1 <= '1';
 	WAIT FOR 40000 ps;
 	bt1 <= '0';
-	WAIT FOR 120000 ps;
+	WAIT FOR 180000 ps;
 	bt1 <= '1';
 	WAIT FOR 40000 ps;
 	bt1 <= '0';
@@ -110,7 +117,7 @@ END PROCESS t_prcs_bt1;
 t_prcs_bt2: PROCESS
 BEGIN
 	bt2 <= '0';
-	WAIT FOR 340000 ps;
+	WAIT FOR 400000 ps;
 	bt2 <= '1';
 	WAIT FOR 40000 ps;
 	bt2 <= '0';
@@ -127,15 +134,13 @@ END PROCESS t_prcs_bt3;
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		clk <= '0';
-		WAIT FOR 40000 ps;
-		clk <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+LOOP
 	clk <= '0';
-WAIT;
+	WAIT FOR 20000 ps;
+	clk <= '1';
+	WAIT FOR 20000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
 -- instrucao[17]
 t_prcs_instrucao_17: PROCESS
@@ -243,7 +248,7 @@ BEGIN
 	instrucao(3) <= '0';
 	WAIT FOR 10000 ps;
 	instrucao(3) <= '1';
-	WAIT FOR 310000 ps;
+	WAIT FOR 150000 ps;
 	instrucao(3) <= '0';
 WAIT;
 END PROCESS t_prcs_instrucao_3;
@@ -260,6 +265,10 @@ END PROCESS t_prcs_instrucao_2;
 -- instrucao[1]
 t_prcs_instrucao_1: PROCESS
 BEGIN
+	instrucao(1) <= '0';
+	WAIT FOR 10000 ps;
+	instrucao(1) <= '1';
+	WAIT FOR 150000 ps;
 	instrucao(1) <= '0';
 WAIT;
 END PROCESS t_prcs_instrucao_1;
