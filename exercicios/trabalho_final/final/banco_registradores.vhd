@@ -43,7 +43,7 @@ ARCHITECTURE arq OF banco_registradores IS
 
 		PROCESS(ler_escrever, resetar, entrada)
 			BEGIN
-				
+--				IF(clk'event and clk = '1') THEN
 						IF (resetar='1') THEN
 							registrador_clear <= "11111111";
 						ELSE
@@ -99,6 +99,6 @@ ARCHITECTURE arq OF banco_registradores IS
 								saida <= reg8;
 							END IF;
 						END IF;
-				
+--				END IF;
 		END PROCESS;
 END ARCHITECTURE;

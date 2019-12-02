@@ -7,25 +7,25 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Dec  2 12:41:04 2019Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source=/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf --testbench_file=/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-ut pin "sd3[3]" in vector source file when writing test bench files
-e when writing test bench files
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Dec  2 13:37:36 2019Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source=/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/Waveform2.vwf --testbench_file=/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vtWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+g output pin "sd3[3]" in vector source file when writing test bench files
+ce file when writing test bench files
 Completed successfully. 
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Dec  2 12:41:06 2019Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/ final -c finalWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file final.vo in folder "/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1043 megabytes    Info: Processing ended: Mon Dec  2 12:41:07 2019    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Mon Dec  2 13:37:37 2019Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/ final -c finalWarning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file final.vo in folder "/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1039 megabytes    Info: Processing ended: Mon Dec  2 13:37:38 2019    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/final.do generated.
+/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/final.do generated.
 
 Completed successfully. 
 
@@ -38,31 +38,29 @@ Reading pref.tcl
 # do final.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:41:08 on Dec 02,2019# vlog -work work final.vo 
-# -- Compiling module final
+# Start time: 13:37:39 on Dec 02,2019# vlog -work work final.vo # -- Compiling module final
 # -- Compiling module hard_block
-# # Top level modules:# 	final# End time: 12:41:08 on Dec 02,2019, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# # Top level modules:# 	final# End time: 13:37:40 on Dec 02,2019, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:41:08 on Dec 02,2019# vlog -work work Waveform2.vwf.vt 
+# Start time: 13:37:40 on Dec 02,2019# vlog -work work Waveform2.vwf.vt 
 # -- Compiling module final_vlg_vec_tst
-# 
-# Top level modules:# 	final_vlg_vec_tst
-# End time: 12:41:08 on Dec 02,2019, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.final_vlg_vec_tst # Start time: 12:41:08 on Dec 02,2019# Loading work.final_vlg_vec_tst# Loading work.final# Loading work.hard_block# Loading cycloneive_ver.cycloneive_io_obuf# Loading cycloneive_ver.cycloneive_io_ibuf# Loading cycloneive_ver.cycloneive_clkctrl# Loading cycloneive_ver.cycloneive_mux41# Loading cycloneive_ver.cycloneive_ena_reg# Loading cycloneive_ver.cycloneive_lcell_comb# Loading altera_ver.dffeas# Loading altera_ver.PRIM_GDFF_LOW
+# # Top level modules:# 	final_vlg_vec_tst
+# End time: 13:37:40 on Dec 02,2019, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.final_vlg_vec_tst # Start time: 13:37:40 on Dec 02,2019# Loading work.final_vlg_vec_tst# Loading work.final# Loading work.hard_block# Loading cycloneive_ver.cycloneive_io_obuf# Loading cycloneive_ver.cycloneive_io_ibuf# Loading cycloneive_ver.cycloneive_clkctrl# Loading cycloneive_ver.cycloneive_mux41# Loading cycloneive_ver.cycloneive_ena_reg# Loading cycloneive_ver.cycloneive_lcell_comb# Loading altera_ver.dffeas# Loading altera_ver.PRIM_GDFF_LOW
 # after#26
 # ** Note: $finish    : Waveform2.vwf.vt(82)#    Time: 1 us  Iteration: 0  Instance: /final_vlg_vec_tst
-# End time: 12:41:08 on Dec 02,2019, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# End time: 13:37:40 on Dec 02,2019, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading /home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf...
+Reading /home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/Waveform2.vwf...
 
-Reading /home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/final.msim.vcd...
+Reading /home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/final.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/final_20191202124108.sim.vwf
+Writing the resulting VWF to /home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/final_20191202133740.sim.vwf
 
 Finished VCD to VWF conversion.
 

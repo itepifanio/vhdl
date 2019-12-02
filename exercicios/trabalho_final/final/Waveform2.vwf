@@ -1,7 +1,7 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"</ftestbench_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"</ftestbench_cmd>
 <ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</fnetlist_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</fnetlist_cmd>
 <tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>

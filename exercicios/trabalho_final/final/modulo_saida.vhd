@@ -49,17 +49,18 @@ architecture arq of modulo_saida is
         end process;
 
         -- ARMAZENANDO O VALOR OBTIDO DA ULA
-			registrador_a <= instrucao(4)&instrucao(5)&instrucao(6);
+--			registrador_a <= instrucao(13)&instrucao(12)&instrucao(11);
 			
-		  ra: banco_registradores port map(       -- Armazenamos o resultado no registrador A
-				clock,
-				'0', 
-				'0',
-				entrada_ULA,
-				registrador_a,
-				registrador_a_saida 
-		  );
-                
+--		  ra: banco_registradores port map(       -- Armazenamos o resultado no registrador A
+--				clock,
+--				'0', 
+--				'0',
+--				entrada_ULA,
+--				registrador_a,
+--				registrador_a_saida 
+--		  );
+	
+			registrador_a_saida <= entrada_ULA;
         -- UTILIZANDO DISPLAY PARA MOSTRAR O RESULTADO
         da: display_7_segmentos port map(registrador_a_saida(3 downto 0), display_a);
         db: display_7_segmentos port map(registrador_a_saida(7 downto 4), display_b);

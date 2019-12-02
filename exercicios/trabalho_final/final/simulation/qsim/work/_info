@@ -9,13 +9,13 @@ z2
 cModel Technology
 d/home/usuario/Documentos/vhdl/exercicios/trabalho_final/final/simulation/qsim
 vfinal
-Z0 !s110 1575301268
+Z0 !s110 1575304660
 !i10b 1
-!s100 <61`ZcKhC:7fWdn<hTdl>3
-Ia]^>SOikS5Zkm>[jke86l3
+!s100 UlRL8>`Gz8iZPRj9]CFo02
+Idm>2Ymf3oIATJTmzY:`X^1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 d/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim
-Z3 w1575301267
+Z2 d/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim
+Z3 w1575304658
 Z4 8final.vo
 Z5 Ffinal.vo
 L0 31
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1575301268.000000
+Z7 !s108 1575304659.000000
 Z8 !s107 final.vo|
 Z9 !s90 -work|work|final.vo|
 !i113 1
@@ -75,7 +75,7 @@ R0
 Ic^aKj;I<M6o9b5IbDHRRX3
 R1
 R2
-w1575301265
+w1575304656
 8Waveform2.vwf.vt
 FWaveform2.vwf.vt
 L0 29
@@ -83,7 +83,7 @@ R6
 r1
 !s85 0
 31
-R7
+!s108 1575304660.000000
 !s107 Waveform2.vwf.vt|
 !s90 -work|work|Waveform2.vwf.vt|
 !i113 1
@@ -92,14 +92,14 @@ R11
 vhard_block
 R0
 !i10b 1
-!s100 3BgMV<Bn3@>UceKV2@C[n1
-I;Jh`d@j6ZaeSP>dT;??2]1
+!s100 KgZNP3]_K0iG:gcgbNd^D2
+I]J;JAcCMZ^zTJ:;X;AzaM2
 R1
 R2
 R3
 R4
 R5
-L0 15106
+L0 15319
 R6
 r1
 !s85 0
