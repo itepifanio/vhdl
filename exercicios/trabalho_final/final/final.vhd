@@ -79,7 +79,7 @@ architecture arq of final is
 	begin
 		i1: modulo_entrada port map(clk, bt1, bt2, bt3, instrucao, aux_reset, aux_escrever_valor, aux_exec_op, aux_op, aux_instrucao_out);
 		i2: modulo_acesso port map (clk, bt1, bt2, instrucao, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b, l1, l2, l3, l4, valor_banco_regs_out, valor_ula_out);
-		i3: banco_registradores port map(clk, bt1, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
+		i3: banco_registradores port map(clk, aux_ler_escrever, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
 		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula);  
 		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, sd1, sd2, sd3, sd4);
 		db_instrucao <= instrucao;

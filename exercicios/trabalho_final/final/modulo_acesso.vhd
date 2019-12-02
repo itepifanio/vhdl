@@ -40,20 +40,18 @@ architecture arq of modulo_acesso is
 		process(clk, escrever_valor, exec_op, instrucao, valor_banco_regs, valor_ula)
 			begin
 				if (clk'event and clk = '1') then
-				
 					if(escrever_valor = '1') then
-					
 						if(pc2 = pc2_init) then
 							ler_escrever <= '1'; -- manda o banco escrever
 							seletor <= '0' & instrucao(1 DOWNTO 0);
 							valor_out <= instrucao(17 DOWNTO 2);
-							a <= instrucao(17 DOWNTO 2);
+--							a <= instrucao(17 DOWNTO 2);
 							pc2 <= pc2_ler_b;
 						elsif(pc2 = pc2_ler_b) then
 							ler_escrever <= '1'; -- manda o banco escrever
 							seletor <= '0' & instrucao(1 DOWNTO 0);
 							valor_out <= instrucao(17 DOWNTO 2);
-							b <= instrucao(17 DOWNTO 2);
+--							b <= instrucao(17 DOWNTO 2);
 							pc2 <= pc2_init;
 						end if;
 						-- | 16 bits (valor) | 2 bits (reg destino) |
@@ -78,11 +76,11 @@ architecture arq of modulo_acesso is
 					
 					if(pc = wait_ler_a) then
 						pc <= ler_a;
+						a <= valor_banco_regs;
 					end if;
 					
 					if(pc = ler_a) then
 						valor_banco_regs_out <= valor_banco_regs; -- (teste)
---						a <= valor_banco_regs;
 						ler_escrever <= '0';
 						seletor <= instrucao(7 downto 5); -- regC
 						pc <= wait_ler_b;
@@ -97,7 +95,7 @@ architecture arq of modulo_acesso is
 					end if;
 					
 					if(pc = ler_b) then
---						b <= valor_banco_regs;
+						b <= valor_banco_regs;
 						ler_escrever <= '1'; -- manda o banco escrever
 						seletor <= instrucao(13 downto 11); -- regA
 						valor_out <= valor_ula; -- talvez tenha que mandar um sinal pra ULA pra poder dizer "opere"
