@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/01/2019 16:33:02"
+-- Generated on "12/01/2019 20:53:11"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
@@ -41,6 +41,7 @@ SIGNAL d_a : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL d_b : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL d_op_ula : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL d_ula : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL db_instrucao : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL debug_reg : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instrucao : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL l1 : STD_LOGIC;
@@ -63,6 +64,7 @@ COMPONENT final
 	d_b : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	d_op_ula : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	d_ula : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	db_instrucao : BUFFER STD_LOGIC_VECTOR(17 DOWNTO 0);
 	debug_reg : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instrucao : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
 	l1 : BUFFER STD_LOGIC;
@@ -89,6 +91,7 @@ BEGIN
 	d_b => d_b,
 	d_op_ula => d_op_ula,
 	d_ula => d_ula,
+	db_instrucao => db_instrucao,
 	debug_reg => debug_reg,
 	instrucao => instrucao,
 	l1 => l1,

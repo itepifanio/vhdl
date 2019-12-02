@@ -7,6 +7,7 @@ entity final is
 			sd1, sd2, sd3, sd4: OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 			l1, l2, l3, l4: OUT STD_LOGIC;
 			d_ula, d_a, d_b, d_op_ula, valor_ula_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste)
+			db_instrucao : out std_logic_vector(17 downto 0);
 			valor_banco_regs_out: OUT STD_LOGIC_VECTOR (15 DOWNTO 0); -- (teste));
 			debug_reg: OUT STD_LOGIC_VECTOR (15 DOWNTO 0) -- (teste));
 			);
@@ -81,6 +82,7 @@ architecture arq of final is
 		i3: banco_registradores port map(clk, bt1, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
 		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula);  
 		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, sd1, sd2, sd3, sd4);
+		db_instrucao <= instrucao;
 		debug_reg <= aux_valor_banco_regs;
 		d_op_ula <= aux_valor_ula;
 		d_a <= aux_a;

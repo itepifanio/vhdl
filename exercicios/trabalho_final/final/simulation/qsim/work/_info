@@ -9,7 +9,7 @@ z2
 cModel Technology
 d/home/usuario/Documentos/vhdl/exercicios/trabalho_final/final/simulation/qsim
 Efinal
-Z0 w1575228783
+Z0 w1575244392
 Z1 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z2 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -18,18 +18,18 @@ Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z8 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
-Z9 d/home/italo/scolarship/vhdl/exercicios/trabalho_final/final/simulation/qsim
+Z9 d/home/epitacio/bti/vhdl/exercicios/trabalho_final/final/simulation/qsim
 Z10 8final.vho
 Z11 Ffinal.vho
 l0
 L79
-V`k;l[MeGaNZ^Y1A@;:fLC2
-!s100 33]:^SQ<kPRbCfj[X[?:R2
+VY:ER?5elcR7lN:A[Z6RQ>1
+!s100 c;k1cin;9zjF=6941Oe0M2
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1575228783
+Z13 !s110 1575244393
 !i10b 1
-Z14 !s108 1575228783.000000
+Z14 !s108 1575244393.000000
 Z15 !s90 -work|work|final.vho|
 Z16 !s107 final.vho|
 !i113 1
@@ -44,11 +44,11 @@ R5
 R6
 R7
 R8
-DEx4 work 5 final 0 22 `k;l[MeGaNZ^Y1A@;:fLC2
-l918
-L273
-V4V[KlO^DZC]@eKKd2`]JK3
-!s100 XE`?@dP^FSTcbKYYL_;ZT3
+DEx4 work 5 final 0 22 Y:ER?5elcR7lN:A[Z6RQ>1
+l796
+L292
+VFkAcK::U=a4jMfA0boMgY2
+!s100 XEjVA`dV_LAz0Djm8zf7F3
 R12
 32
 R13
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Efinal_vhd_vec_tst
-Z19 w1575228782
+Z19 w1575244391
 R6
 R7
 R9
@@ -84,10 +84,10 @@ Afinal_arch
 R6
 R7
 Z24 DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
-l80
+l82
 L33
-Z25 V`X89;JOo:L2V;Z`a:3LTl0
-Z26 !s100 SE>M1B[SX<3c`1FJn7;X31
+Z25 VL[9ekmI;5bI[J8VN;^BBY1
+Z26 !s100 WN=P0^olloz[i^hCFi[>B2
 R12
 32
 R13

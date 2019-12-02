@@ -23,7 +23,7 @@ architecture arq of modulo_saida is
     end component;
     component banco_registradores is
 		PORT 	(  
-            ler_escrever, resetar: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
+            clk, ler_escrever, resetar: IN STD_LOGIC; -- 0 -> lê do registrador; 1 -> escreve no registrador.
             entrada: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
             seletor: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
             saida: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
@@ -52,7 +52,8 @@ architecture arq of modulo_saida is
 			registrador_a <= instrucao(4)&instrucao(5)&instrucao(6);
 			
 		  ra: banco_registradores port map(       -- Armazenamos o resultado no registrador A
-				'1', 
+				clock,
+				'0', 
 				'0',
 				entrada_ULA,
 				registrador_a,

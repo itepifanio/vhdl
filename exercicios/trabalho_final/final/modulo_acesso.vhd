@@ -40,7 +40,9 @@ architecture arq of modulo_acesso is
 		process(clk, escrever_valor, exec_op, instrucao, valor_banco_regs, valor_ula)
 			begin
 				if (clk'event and clk = '1') then
+				
 					if(escrever_valor = '1') then
+					
 						if(pc2 = pc2_init) then
 							ler_escrever <= '1'; -- manda o banco escrever
 							seletor <= '0' & instrucao(1 DOWNTO 0);

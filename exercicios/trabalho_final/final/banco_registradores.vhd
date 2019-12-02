@@ -43,7 +43,7 @@ ARCHITECTURE arq OF banco_registradores IS
 
 		PROCESS(ler_escrever, resetar, entrada)
 			BEGIN
-				IF (clk'event AND clk='1') THEN
+				
 						IF (resetar='1') THEN
 							registrador_clear <= "11111111";
 						ELSE
@@ -54,51 +54,51 @@ ARCHITECTURE arq OF banco_registradores IS
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00000001";
 							ELSE
-								saida <= reg1;
+								saida <= entrada;
 							END IF;    
 						ELSIF (seletor="001") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00000010";
 							ELSE
-								saida <= reg2;
+								saida <= entrada;
 							END IF;
 						ELSIF (seletor="010") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00000100";
 							ELSE
-								saida <= reg3;
+								saida <= entrada;
 							END IF;
 						ELSIF (seletor="011") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00001000";
 							ELSE
-								saida <= reg4;
+								saida <= entrada;
 							END IF;
 						ELSIF (seletor="100") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00010000";
 							ELSE
-								saida <= reg5;
+								saida <= entrada;
 							END IF;
 						ELSIF (seletor="101") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "00100000";
 							ELSE
-								saida <= reg6;
+								saida <= entrada;
 							END IF;
 						ELSIF (seletor="110") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "01000000";
 							ELSE
-								saida <= reg7;
+								saida <= entrada;
 							END IF;
 						ELSIF (seletor="111") THEN
 							IF (ler_escrever='1') THEN
 								registrador_escolhido <= "10000000";
 							ELSE
-								saida <= reg8;
+								saida <= entrada;
 							END IF;
 						END IF;
-				END IF;
+				
 		END PROCESS;
 END ARCHITECTURE;
