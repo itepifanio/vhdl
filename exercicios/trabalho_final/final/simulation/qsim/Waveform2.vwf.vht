@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/01/2019 20:53:11"
+-- Generated on "12/03/2019 17:42:24"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          final
 -- 
@@ -109,14 +109,12 @@ BEGIN
 -- bt1
 t_prcs_bt1: PROCESS
 BEGIN
-	bt1 <= '0';
+	bt1 <= '1';
 	WAIT FOR 20000 ps;
-	bt1 <= '1';
-	WAIT FOR 40000 ps;
 	bt1 <= '0';
-	WAIT FOR 120000 ps;
+	WAIT FOR 180000 ps;
 	bt1 <= '1';
-	WAIT FOR 40000 ps;
+	WAIT FOR 20000 ps;
 	bt1 <= '0';
 WAIT;
 END PROCESS t_prcs_bt1;
@@ -125,9 +123,9 @@ END PROCESS t_prcs_bt1;
 t_prcs_bt2: PROCESS
 BEGIN
 	bt2 <= '0';
-	WAIT FOR 340000 ps;
+	WAIT FOR 360000 ps;
 	bt2 <= '1';
-	WAIT FOR 40000 ps;
+	WAIT FOR 20000 ps;
 	bt2 <= '0';
 WAIT;
 END PROCESS t_prcs_bt2;
@@ -142,15 +140,13 @@ END PROCESS t_prcs_bt3;
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		clk <= '0';
-		WAIT FOR 40000 ps;
-		clk <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+LOOP
 	clk <= '0';
-WAIT;
+	WAIT FOR 20000 ps;
+	clk <= '1';
+	WAIT FOR 20000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
 -- instrucao[17]
 t_prcs_instrucao_17: PROCESS
@@ -246,10 +242,6 @@ END PROCESS t_prcs_instrucao_5;
 t_prcs_instrucao_4: PROCESS
 BEGIN
 	instrucao(4) <= '0';
-	WAIT FOR 160000 ps;
-	instrucao(4) <= '1';
-	WAIT FOR 160000 ps;
-	instrucao(4) <= '0';
 WAIT;
 END PROCESS t_prcs_instrucao_4;
 -- instrucao[3]
@@ -264,7 +256,7 @@ BEGIN
 	instrucao(2) <= '0';
 	WAIT FOR 10000 ps;
 	instrucao(2) <= '1';
-	WAIT FOR 310000 ps;
+	WAIT FOR 150000 ps;
 	instrucao(2) <= '0';
 WAIT;
 END PROCESS t_prcs_instrucao_2;

@@ -8,78 +8,108 @@ z2
 !i10f 100
 cModel Technology
 d/home/usuario/Documentos/vhdl/exercicios/trabalho_final/final/simulation/qsim
-vfinal
-Z0 !s110 1575304660
+Efinal
+Z0 w1575405746
+Z1 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z2 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+Z9 d/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim
+Z10 8final.vho
+Z11 Ffinal.vho
+l0
+L79
+VY:ER?5elcR7lN:A[Z6RQ>1
+!s100 c;k1cin;9zjF=6941Oe0M2
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1575405748
 !i10b 1
-!s100 UlRL8>`Gz8iZPRj9]CFo02
-Idm>2Ymf3oIATJTmzY:`X^1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 d/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim
-Z3 w1575304658
-Z4 8final.vo
-Z5 Ffinal.vo
-L0 31
-Z6 OV;L;10.5b;63
-r1
-!s85 0
-31
-Z7 !s108 1575304659.000000
-Z8 !s107 final.vo|
-Z9 !s90 -work|work|final.vo|
+Z14 !s108 1575405748.000000
+Z15 !s90 -work|work|final.vho|
+Z16 !s107 final.vho|
 !i113 1
-Z10 o-work work
-Z11 tCvgOpt 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 5 final 0 22 Y:ER?5elcR7lN:A[Z6RQ>1
+l1155
+L292
+VzODN^]g[lR<Vio9MmLozU0
+!s100 RG`[J1U`@14i`I2H;E?>c1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
 Efinal_vhd_vec_tst
-Z12 w1575244391
-Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z15 d/home/epitacio/bti/vhdl/exercicios/trabalho_final/final/simulation/qsim
-Z16 8Waveform2.vwf.vht
-Z17 FWaveform2.vwf.vht
+Z19 w1575405744
+R6
+R7
+R9
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
 l0
 L31
 Vn5[i<;d^2if;_k<6Vl>JY2
 !s100 80@dn6G;^TW_N>h?hc3DX3
-Z18 OV;C;10.5b;63
+R12
 32
-Z19 !s110 1575244393
+Z22 !s110 1575405749
 !i10b 1
-Z20 !s108 1575244393.000000
-Z21 !s90 -work|work|Waveform2.vwf.vht|
-Z22 !s107 Waveform2.vwf.vht|
-!i113 1
-R10
-Z23 tExplicit 1 CvgOpt 0
-Afinal_arch
-R13
 R14
-DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
+Z23 !s90 -work|work|Waveform2.vwf.vht|
+Z24 !s107 Waveform2.vwf.vht|
+!i113 1
+R17
+R18
+Afinal_arch
+R6
+R7
+Z25 DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
 l82
 L33
-VL[9ekmI;5bI[J8VN;^BBY1
-!s100 WN=P0^olloz[i^hCFi[>B2
-R18
+Z26 V;U87fBJPTCLC@;45_MEKe2
+Z27 !s100 KJGbhjdK=o;bQ<mOV=EH33
+R12
 32
-R19
-!i10b 1
-R20
-R21
 R22
-!i113 1
-R10
+!i10b 1
+R14
 R23
+R24
+!i113 1
+R17
+R18
 vfinal_vlg_vec_tst
-R0
+!s110 1575304660
 !i10b 1
 !s100 J:EYShkB[O6zDD`?WmnW=2
 Ic^aKj;I<M6o9b5IbDHRRX3
-R1
-R2
+VDg1SIo80bB@j0V0VzS_@n1
+d/home/epitaciobessa/circuitos/vhdl/exercicios/trabalho_final/final/simulation/qsim
 w1575304656
 8Waveform2.vwf.vt
 FWaveform2.vwf.vt
 L0 29
-R6
+OV;L;10.5b;63
 r1
 !s85 0
 31
@@ -87,26 +117,52 @@ r1
 !s107 Waveform2.vwf.vt|
 !s90 -work|work|Waveform2.vwf.vt|
 !i113 1
-R10
-R11
-vhard_block
+R17
+tCvgOpt 0
+Ehard_block
 R0
-!i10b 1
-!s100 KgZNP3]_K0iG:gcgbNd^D2
-I]J;JAcCMZ^zTJ:;X;AzaM2
-R1
-R2
 R3
-R4
+R1
 R5
-L0 15319
 R6
-r1
-!s85 0
-31
 R7
-R8
+R2
 R9
-!i113 1
 R10
 R11
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R3
+R1
+R5
+R6
+R7
+R2
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18

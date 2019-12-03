@@ -50,6 +50,7 @@ architecture arq of final is
 	
 	component ULA IS
 		port(a,b: inout std_logic_vector(15 downto 0);
+			  instrucao: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
 		     op: in std_logic_vector(3 downto 0);
 		     can_op: in std_logic; -- verifica se posso operar
 		     s: inout std_logic_vector(15 downto 0)
@@ -80,7 +81,7 @@ architecture arq of final is
 		i1: modulo_entrada port map(clk, bt1, bt2, bt3, instrucao, aux_reset, aux_escrever_valor, aux_exec_op, aux_op, aux_instrucao_out);
 		i2: modulo_acesso port map (clk, bt1, bt2, instrucao, aux_valor_banco_regs, aux_valor_ula,  aux_seletor, aux_ler_escrever, aux_valor_out, aux_exec_op_out, aux_escrever_valor_out, aux_a, aux_b, l1, l2, l3, l4, valor_banco_regs_out, valor_ula_out);
 		i3: banco_registradores port map(clk, aux_ler_escrever, bt3, aux_valor_out, aux_seletor, aux_valor_banco_regs);
-		i4: ULA port map (aux_a, aux_b, aux_op, aux_exec_op_out, aux_valor_ula);  
+		i4: ULA port map (aux_a, aux_b, ("0000000000" & instrucao(5 downto 0)), aux_op, aux_exec_op_out, aux_valor_ula);  
 		i5: modulo_saida port map(clk, aux_op_end, instrucao, aux_valor_ula, aux_leds, sd1, sd2, sd3, sd4);
 		db_instrucao <= instrucao;
 		debug_reg <= aux_valor_banco_regs;
