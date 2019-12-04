@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off final -c final --vector_source="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/Waveform2.vwf" --testbench_file="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/Waveform2.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim/" final -c final</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
-vcom -work work final.vho
-vcom -work work Waveform2.vwf.vht
-vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.final_vhd_vec_tst
+vlog -work work final.vo
+vlog -work work Waveform2.vwf.vt
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.final_vlg_vec_tst
 vcd file -direction final.msim.vcd
-vcd add -internal final_vhd_vec_tst/*
-vcd add -internal final_vhd_vec_tst/i1/*
+vcd add -internal final_vlg_vec_tst/*
+vcd add -internal final_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -23,12 +23,12 @@ quit -f
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
-vcom -work work final.vho
-vcom -work work Waveform2.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax final_vhd_vec_tst/i1=final_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.final_vhd_vec_tst
+vlog -work work final.vo
+vlog -work work Waveform2.vwf.vt
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.final_vlg_vec_tst
 vcd file -direction final.msim.vcd
-vcd add -internal final_vhd_vec_tst/*
-vcd add -internal final_vhd_vec_tst/i1/*
+vcd add -internal final_vlg_vec_tst/*
+vcd add -internal final_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -39,7 +39,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 </modelsim_script_timing>
-<hdl_lang>vhdl</hdl_lang>
+<hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
@@ -2045,6 +2045,46 @@ SIGNAL("db_instrucao[0]")
 	PARENT = "db_instrucao";
 }
 
+SIGNAL("seletor")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 3;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("seletor[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "seletor";
+}
+
+SIGNAL("seletor[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "seletor";
+}
+
+SIGNAL("seletor[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "seletor";
+}
+
 TRANSITION_LIST("bt1")
 {
 	NODE
@@ -2064,7 +2104,9 @@ TRANSITION_LIST("bt2")
 		REPEAT = 1;
 		LEVEL 0 FOR 360.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 620.0;
+		LEVEL 0 FOR 280.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 300.0;
 	}
 }
 
@@ -2143,7 +2185,9 @@ TRANSITION_LIST("instrucao[12]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 520.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -2154,7 +2198,9 @@ TRANSITION_LIST("instrucao[11]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 520.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -2181,7 +2227,9 @@ TRANSITION_LIST("instrucao[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 660.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -2210,7 +2258,9 @@ TRANSITION_LIST("instrucao[5]")
 		REPEAT = 1;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 160.0;
-		LEVEL 0 FOR 520.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -2228,7 +2278,9 @@ TRANSITION_LIST("instrucao[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 840.0;
 	}
 }
 
@@ -2238,8 +2290,8 @@ TRANSITION_LIST("instrucao[2]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 150.0;
-		LEVEL 0 FOR 840.0;
+		LEVEL 1 FOR 310.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -3713,6 +3765,33 @@ TRANSITION_LIST("db_instrucao[1]")
 }
 
 TRANSITION_LIST("db_instrucao[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("seletor[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("seletor[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("seletor[0]")
 {
 	NODE
 	{
@@ -5681,6 +5760,46 @@ DISPLAY_LINE
 	TREE_INDEX = 196;
 	TREE_LEVEL = 1;
 	PARENT = 178;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "seletor";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 197;
+	TREE_LEVEL = 0;
+	CHILDREN = 198, 199, 200;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "seletor[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 198;
+	TREE_LEVEL = 1;
+	PARENT = 197;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "seletor[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 199;
+	TREE_LEVEL = 1;
+	PARENT = 197;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "seletor[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 200;
+	TREE_LEVEL = 1;
+	PARENT = 197;
 }
 
 TIME_BAR

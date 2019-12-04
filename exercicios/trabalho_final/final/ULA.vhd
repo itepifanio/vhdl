@@ -40,7 +40,7 @@ architecture arq of ULA is
 			begin
 				if(can_op = '1') then
 					if(op = "0000") then
-						s <= "0000000000000001"; -- RA = RB + RC
+						s <= a + b; -- RA = RB + RC
 					elsif(op = "0001") then
 						s <= a + instrucao; -- RA = RB + const
 					elsif(op = "0010") then
