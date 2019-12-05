@@ -1,0 +1,112 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/vhdl/exercicios/trabalho_final/final/simulation/qsim
+vfinal
+Z0 !s110 1575468384
+!i10b 1
+!s100 cFC7AK=zYlQ=WjHhKK0<W2
+IjN@9CTc7Q85@[dBU0OTm:2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/itepifanio/workspace/vhdl/exercicios/trabalho_final/final/simulation/qsim
+Z3 w1575468383
+Z4 8final.vo
+Z5 Ffinal.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1575468384.000000
+Z8 !s107 final.vo|
+Z9 !s90 -work|work|final.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+Efinal_vhd_vec_tst
+Z12 w1575405744
+Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R2
+Z15 8Waveform2.vwf.vht
+Z16 FWaveform2.vwf.vht
+l0
+L31
+Vn5[i<;d^2if;_k<6Vl>JY2
+!s100 80@dn6G;^TW_N>h?hc3DX3
+Z17 OV;C;10.5b;63
+32
+Z18 !s110 1575405749
+!i10b 1
+Z19 !s108 1575405748.000000
+Z20 !s90 -work|work|Waveform2.vwf.vht|
+Z21 !s107 Waveform2.vwf.vht|
+!i113 1
+R10
+Z22 tExplicit 1 CvgOpt 0
+Afinal_arch
+R13
+R14
+DEx4 work 17 final_vhd_vec_tst 0 22 n5[i<;d^2if;_k<6Vl>JY2
+l82
+L33
+V;U87fBJPTCLC@;45_MEKe2
+!s100 KJGbhjdK=o;bQ<mOV=EH33
+R17
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R10
+R22
+vfinal_vlg_vec_tst
+R0
+!i10b 1
+!s100 =Uc0BR?iW9:@Z7RA1k>c[2
+ImIdJ5AAKRcIe;[hZcB`?41
+R1
+R2
+w1575468381
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+R0
+!i10b 1
+!s100 hVRgkB^JF8hLIFVk_z4iX3
+ITFzMV;UH8AF;Ef6KSS8bl3
+R1
+R2
+R3
+R4
+R5
+L0 17749
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
